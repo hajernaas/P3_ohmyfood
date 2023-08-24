@@ -6,14 +6,22 @@
     @return  math.div(1rem * $size, $base);
 }
 
+
+
+
 // variables 
 //colors
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$white: #FFF; 
 $grey-2: #EAEAEA;
+$grey: #353535;
 $base-color: #000000;
-$border-dark: rgba($base-color, 0.15);
+$background-color: #F6F6F6;
+// $border-dark: rgba($base-color, 0.15);
+$border-box-shadow-header: rgba($base-color,0.15);
+$border-box-shadow-btn: rgba($base-color,0.25);
 //background-color
 $background-color-location: $grey-2;
 //font-family
@@ -31,6 +39,14 @@ $regular-font-weight:400;
 $medium-font-weight:500;
 $bold-font-weight:700;
 
+//mixins
+@mixin border-radius($size){
+    border-radius: $size;
+}
+
+@mixin box-shadow($shadow1,$shadow2,$shadow3,$shadow4,$border-box-shadow-header){
+    box-shadow: $shadow1 $shadow2 $shadow3 $shadow4 $border-box-shadow-header;
+}
 
 /***********/
 * { 
@@ -43,7 +59,8 @@ html, body{
 }
 
 .header{
-    box-shadow: 0px 2px 4px 0px $border-dark;
+    // box-shadow: 0px 2px 4px 0px $border-box-shadow;
+    @include box-shadow(0px,2px,4px,0px,$border-box-shadow-header);
     padding:rem(14) rem(89) rem(13) rem(89);
     margin:0;
     position: relative;
@@ -67,7 +84,6 @@ html, body{
     justify-content: center;
     align-items: center;
     gap:rem(5);
-    padding: 0.5rem;
 
     &__icon{
         width: rem(12);
@@ -77,12 +93,56 @@ html, body{
     &__input{
         text-align: center;
         font-size:$f4-font-size ;
-        font-weight:$medium-font-weight;
+        font-weight:$bold-font-weight;
         border: none;
         @extend %background-color-location;
         width:rem(150);
         height:rem(49);
+        color:$grey ; 
         
     }
 
+}
+
+.explorer{
+  
+    background-color:$background-color; 
+    padding:rem(40) 0;
+    text-align: center;
+    &__title{
+        font-size:$f1-font-size;
+        font-weight:$bold-font-weight; 
+        margin: 0 rem(58) 0 rem(42);
+    }
+    &__content{
+        font-size: $f2-font-size;
+        font-weight:$light-font-weight; 
+        color: $grey; 
+        margin: 0 rem(26) rem(27) rem(34);
+    }
+
+    &__btn{
+        width: rem(218);
+        height: rem(50); 
+        @include border-radius(rem(25));
+        background-image: linear-gradient(to top, $color-primary 0%, $color-secondary 100%);
+        @include box-shadow(0px,4px,10px,0px,$border-box-shadow-btn);
+        color: $white;
+        border: none;
+        font-size: $f4-font-size;
+        font-weight:$medium-font-weight;
+        padding: rem(13) rem(18.75);
+        
+        &:hover {
+            background-color: lighten(#9356dc, 10%);
+            background-blend-mode: lighten;
+            opacity: 1;
+            cursor: pointer;
+            color: $white;
+          }
+        
+    }
+
+    
+ 
 }
