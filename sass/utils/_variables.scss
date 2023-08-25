@@ -3,14 +3,11 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $white: #FFF; 
-$grey-2: #EAEAEA;
 $grey: #353535;
+$grey-1: #7E7E7E;
+$grey-2: #EAEAEA;
 $base-color: #000000;
-//font-size
-$f1-font-size: rem(24);
-$f2-font-size: rem(18);
-$f3-font-size: rem(17);
-$f4-font-size: rem(16);
+
 //background-color
 $background-color: #F6F6F6;
 $background-color-location: $grey-2;
@@ -23,7 +20,8 @@ $background-image: linear-gradient(to top, $color-primary 0%, $color-secondary 1
 //border-radius
 $radius:(
 menu:20,
-btn:25
+btn:25,
+steps-menu:50
 );
 
 

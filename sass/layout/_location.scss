@@ -4,7 +4,6 @@
 }
 .location{
      @extend %background-color-location;
-    // background-color:$background-color-location;
     height: rem(50);
     display: flex;
     justify-content: center;
