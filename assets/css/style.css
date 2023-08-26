@@ -12,10 +12,11 @@ h2 {
   font-weight: 700;
 }
 
-/*@mixin border-radius($size){
-    border-radius: $size;
+a {
+  text-decoration: none;
+  color: black;
 }
-*/
+
 .header {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
@@ -27,11 +28,8 @@ h2 {
   text-align: center;
 }
 
-.location__input, .location {
-  background-color: #EAEAEA;
-}
-
 .location {
+  background-color: #EAEAEA;
   height: 3.125rem;
   display: flex;
   justify-content: center;
@@ -47,6 +45,7 @@ h2 {
   font-size: 1rem;
   font-weight: 700;
   border: none;
+  background-color: #EAEAEA;
   width: 9.375rem;
   height: 3.0625rem;
   color: #353535;
@@ -144,8 +143,8 @@ h2 {
   font-weight: 500;
   background-color: #9356DC;
   padding: 0.375rem;
-  height: 1rem;
   width: 1rem;
+  height: 1rem;
   border-radius: 3.125rem;
   display: flex;
   justify-content: center;
@@ -177,6 +176,7 @@ h2 {
   position: relative;
   background: #FFF;
   margin: 1.25rem;
+  padding-bottom: 5px;
 }
 .restaurants .card__btn {
   color: #008766;
@@ -201,43 +201,123 @@ h2 {
   max-height: 220px;
   background-repeat: no-repeat;
 }
+.restaurants .card__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants .card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0.625rem 0 0.3125rem 0.8125rem;
+}
+.restaurants .card__subtitle {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  margin-left: 0.8125rem;
+  margin-top: 0;
+}
+.restaurants .card__heart {
+  position: relative;
+}
 .restaurants .card__heart .card__heart-empty {
   visibility: visible;
   position: absolute;
-  right: 14px;
-  top: 250px;
-  width: 23px;
-  height: 23px;
+  right: 1.5625rem;
+  top: 0.3125rem;
+  width: 1.4375rem;
+  height: 1.4375rem;
 }
 .restaurants .card__heart .card__heart-full {
   visibility: hidden;
-  position: absolute;
-  top: 250px;
-  right: 14px;
   opacity: 0;
-}
-.restaurants .card__heart #activate-div {
-  display: none;
   position: absolute;
-  top: 250px;
-  right: 14px;
+  right: 1.5625rem;
+  top: 0.3125rem;
 }
-.restaurants .card__heart #activate-div:checked ~ label .card__heart-empty {
+.restaurants .card__heart #activate1-div {
+  display: block;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate1-div:checked ~ label .card__heart-empty {
   visibility: hidden;
-  position: absolute;
-  top: 250px;
-  right: 14px;
-  opacity: 0;
   cursor: pointer;
-  width: 23px;
-  height: 23px;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
 }
-.restaurants .card__heart #activate-div:checked ~ label .card__heart-full {
+.restaurants .card__heart #activate1-div:checked ~ label .card__heart-full {
   visibility: visible;
-  top: 250px;
-  right: 14px;
   opacity: 1;
   cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate2-div {
+  display: block;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate2-div:checked ~ label .card__heart-empty {
+  visibility: hidden;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate2-div:checked ~ label .card__heart-full {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate3-div {
+  display: block;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate3-div:checked ~ label .card__heart-empty {
+  visibility: hidden;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate3-div:checked ~ label .card__heart-full {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate4-div {
+  display: block;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate4-div:checked ~ label .card__heart-empty {
+  visibility: hidden;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
+}
+.restaurants .card__heart #activate4-div:checked ~ label .card__heart-full {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.3125rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,8 +17,7 @@
     }
 
     &__btn{
-        width: rem(218);
-        height: rem(50); 
+        @include dimension(218,50);
         border-radius:rem(map-get($radius,btn));
         background-image: $background-image;
         @include box-shadow-btn;

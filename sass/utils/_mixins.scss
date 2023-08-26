@@ -1,8 +1,9 @@
 //mixins
-/*@mixin border-radius($size){
-    border-radius: $size;
+@mixin dimension($width,$height){
+    width: rem($width);
+    height:rem($height); 
 }
-*/
+
 @mixin box-shadow-badge
 {
     box-shadow: 0 rem(2) rem(4) 0 $border-box-shadow-badge ;
@@ -25,5 +26,11 @@
     opacity: 1;
 }
 
+@mixin position-absolute-heart{
+    position:  absolute;
+    right: rem(25);
+    top:rem(5);
+
+}
 
 

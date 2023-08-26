@@ -8,13 +8,15 @@
     &__title{
         padding: rem(20) 0 0 rem(30);
     }
+
     .card{
         border-radius: rem(map-get($radius,card));
         @include box-shadow-menu ;
-        position: relative;
+         position: relative;
         background:$white; 
         margin: rem(20);
-       
+        padding-bottom: 5px;
+
         &__btn{
             
             color:$green;
@@ -31,8 +33,7 @@
             text-align: center;
             @include box-shadow-badge;
             
-        }
-              
+        }       
             
         &__img {
             object-fit: cover;
@@ -41,75 +42,162 @@
             width: 100%;
             max-height: 220px;
             background-repeat: no-repeat;
+            // margin:10px;
         }  
         
-   
-
-        &__heart {
-            
-                .card__heart-empty {
-                    visibility: visible;
-                    position: absolute;
-                    right: 14px;
-                    top: 250px;
-                    width:23px;
-                    height: 23px;
-                    
-                }
-                
-                .card__heart-full {
-                    visibility: hidden;
-                    position: absolute;
-                        top: 250px;
-                        right: 14px;
-                        opacity: 0;
-                }
-
-
-
-   #activate-div 
-        {
-            display: none;
-            position: absolute;
-            top: 250px;
-            right: 14px;
-           
+       &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+        }  
         
+        &__title {
+            font-size:$f2-font-size ;
+            font-weight:$bold-font-weight;
+            margin:rem(10) 0 rem(5) rem(13);
         }
-        
-        #activate-div:checked ~ label 
-        {
+    
+        &__subtitle{
+            font-size: $f3-font-size;
+            font-weight: $light-font-weight; 
+            margin-left: rem(13);
+            margin-top: 0;
+        }
+    
+         
+        &__heart {
+
+            position : relative;
+
             .card__heart-empty {
-                visibility: hidden;
-                    position: absolute;
-                    top: 250px;
-                    right: 14px;
-                    opacity: 0;
-                    cursor: pointer;
-                    width:23px;
-                    height: 23px;
-                    
-                    
-                
-            }
-            .card__heart-full{
-                            
                 visibility: visible;
-                    top: 250px;
-                    right: 14px;
-                    // transition: 1.5s;
+                @include position-absolute-heart;
+                @include dimension(23,23);
+            }
+                
+            .card__heart-full {
+                visibility: hidden;
+                opacity: 0;
+                @include position-absolute-heart;
+            }
+
+            #activate1-div 
+            {
+                // display: none;
+                display:block;
+                @include position-absolute-heart;
+              
+            }
+        
+            #activate1-div:checked ~ label 
+            {
+                .card__heart-empty {
+                    visibility: hidden;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+                   
+                }
+
+                 .card__heart-full{            
+                    visibility: visible;
                     opacity: 1;
                     cursor: pointer;
+                    @include position-absolute-heart;
             }
         
+            }
+
+
+            #activate2-div 
+            {
+                // display: none;
+                display:block;
+                @include position-absolute-heart;
+              
+            }
+        
+            #activate2-div:checked ~ label 
+            {
+                .card__heart-empty {
+                    visibility: hidden;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+                   
+                }
+
+                 .card__heart-full{            
+                    visibility: visible;
+                    opacity: 1;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+            }
+        
+            }
+
+            
+            #activate3-div 
+            {
+                // display: none;
+                display:block;
+                @include position-absolute-heart;
+              
+            }
+        
+            #activate3-div:checked ~ label 
+            {
+                .card__heart-empty {
+                    visibility: hidden;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+                   
+                }
+
+                 .card__heart-full{            
+                    visibility: visible;
+                    opacity: 1;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+            }
+        
+            }
+
+            #activate4-div 
+            {
+                // display: none;
+                display:block;
+                @include position-absolute-heart;
+              
+            }
+        
+            #activate4-div:checked ~ label 
+            {
+                .card__heart-empty {
+                    visibility: hidden;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+                   
+                }
+
+                 .card__heart-full{            
+                    visibility: visible;
+                    opacity: 1;
+                    cursor: pointer;
+                    @include position-absolute-heart;
+            }
+        
+            }
+
+
+
+
+
+
+
         }
-    }
-
-
-
-
-    }     
-   
+  
+    }  
+    
+    
 }
 
 
