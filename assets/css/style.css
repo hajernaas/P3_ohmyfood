@@ -162,10 +162,6 @@ h2 {
   margin-left: 1.25rem;
 }
 
-:root {
-  --visiblity-heart: visible;
-}
-
 .restaurants {
   background-color: #F6F6F6;
   /* display: flex;
@@ -209,44 +205,37 @@ h2 {
   visibility: visible;
   position: absolute;
   right: 14px;
-  top: 300px;
+  top: 250px;
+  width: 23px;
+  height: 23px;
 }
 .restaurants .card__heart .card__heart-full {
   visibility: hidden;
   position: absolute;
-  top: 300px;
+  top: 250px;
   right: 14px;
   opacity: 0;
 }
-.restaurants #activate-div {
+.restaurants .card__heart #activate-div {
   display: none;
-}
-.restaurants ~ label .card__heart-empty {
-  visibility: visible;
   position: absolute;
+  top: 250px;
   right: 14px;
-  top: 300px;
 }
-.restaurants ~ label .card__heart-full {
+.restaurants .card__heart #activate-div:checked ~ label .card__heart-empty {
   visibility: hidden;
   position: absolute;
-  top: 300px;
-  right: 14px;
-  opacity: 0;
-}
-.restaurants #activate-div:checked ~ label .card__heart-empty {
-  visibility: hidden;
-  position: absolute;
-  top: 300px;
+  top: 250px;
   right: 14px;
   opacity: 0;
   cursor: pointer;
+  width: 23px;
+  height: 23px;
 }
-.restaurants #activate-div:checked ~ label .card__heart-full {
+.restaurants .card__heart #activate-div:checked ~ label .card__heart-full {
   visibility: visible;
-  top: 300px;
+  top: 250px;
   right: 14px;
-  transition: 1.5s;
   opacity: 1;
   cursor: pointer;
 }
