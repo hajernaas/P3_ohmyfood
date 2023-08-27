@@ -1,0 +1,49 @@
+ .footer {
+  /*  display: flex;
+    flex-direction: column;
+    gap:16;*/
+    padding: 22px 25px;
+    background:$grey;
+    &__title {
+        color: $white;
+        font-size: $f2-font-size;
+        font-weight:$regular-font-weight;
+        margin-top:rem(16) ;
+     
+      }
+      &__list{
+        list-style-type: none;
+        
+      }
+      &__list-li{
+      padding-left:25px;
+      }
+
+      &__list--link{
+        color:white;
+      }
+  }
+
+  
+ 
+
+    /*ul {
+      list-style-type: none;
+  
+      li {
+        padding: 5px 0 5px 0;
+  
+        a {
+          color: white;
+        }
+      }
+    }
+  
+      .fa-utensils {
+        margin-right: 12px;
+      }
+      .fa-hands-helping {
+        margin-right: 5px;
+      }
+  
+  */

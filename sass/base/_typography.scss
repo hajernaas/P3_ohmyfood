@@ -1,7 +1,7 @@
 
 //font-family
 $body-font-family: 'Roboto', sans-serif;
-$logo-font-family: 'Shrikhand', cursive;
+$header-footer-font-family: 'Shrikhand', cursive;
 
 //font-weight
 $light-font-weight:300;
@@ -32,4 +32,7 @@ h2{
 a{
     text-decoration: none;
     color: black;
+}
+h1,h4{
+    font-family:$header-footer-font-family; 
 }

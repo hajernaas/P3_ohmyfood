@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+h1, h4 {
+  font-family: "Shrikhand", cursive;
+}
+
 .header {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
@@ -24,7 +28,6 @@ a {
   position: relative;
 }
 .header__logo {
-  font-family: "Shrikhand", cursive;
   text-align: center;
 }
 
@@ -236,7 +239,7 @@ a {
   top: 0.3125rem;
 }
 .restaurants .card__heart #activate1-div {
-  display: block;
+  display: none;
   position: absolute;
   right: 1.5625rem;
   top: 0.3125rem;
@@ -257,7 +260,7 @@ a {
   top: 0.3125rem;
 }
 .restaurants .card__heart #activate2-div {
-  display: block;
+  display: none;
   position: absolute;
   right: 1.5625rem;
   top: 0.3125rem;
@@ -278,7 +281,7 @@ a {
   top: 0.3125rem;
 }
 .restaurants .card__heart #activate3-div {
-  display: block;
+  display: none;
   position: absolute;
   right: 1.5625rem;
   top: 0.3125rem;
@@ -299,7 +302,7 @@ a {
   top: 0.3125rem;
 }
 .restaurants .card__heart #activate4-div {
-  display: block;
+  display: none;
   position: absolute;
   right: 1.5625rem;
   top: 0.3125rem;
@@ -319,5 +322,49 @@ a {
   right: 1.5625rem;
   top: 0.3125rem;
 }
+
+.footer {
+  /*  display: flex;
+    flex-direction: column;
+    gap:16;*/
+  padding: 22px 25px;
+  background: #353535;
+}
+.footer__title {
+  color: #FFF;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.footer__list {
+  list-style-type: none;
+}
+.footer__list-li {
+  padding-left: 25px;
+}
+.footer__list--link {
+  color: white;
+}
+
+/*ul {
+    list-style-type: none;
+
+    li {
+      padding: 5px 0 5px 0;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+    .fa-utensils {
+      margin-right: 12px;
+    }
+    .fa-hands-helping {
+      margin-right: 5px;
+    }
+
+*/
 
 /*# sourceMappingURL=style.css.map */

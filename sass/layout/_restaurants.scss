@@ -83,8 +83,7 @@
 
             #activate1-div 
             {
-                // display: none;
-                display:block;
+                display: none;
                 @include position-absolute-heart;
               
             }
@@ -110,8 +109,7 @@
 
             #activate2-div 
             {
-                // display: none;
-                display:block;
+                display: none;
                 @include position-absolute-heart;
               
             }
@@ -137,8 +135,7 @@
             
             #activate3-div 
             {
-                // display: none;
-                display:block;
+                display: none;
                 @include position-absolute-heart;
               
             }
@@ -163,8 +160,7 @@
 
             #activate4-div 
             {
-                // display: none;
-                display:block;
+                display: none;
                 @include position-absolute-heart;
               
             }
@@ -186,12 +182,6 @@
             }
         
             }
-
-
-
-
-
-
 
         }
   
