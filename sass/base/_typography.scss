@@ -18,11 +18,15 @@ $f5-font-size: rem(14);
 
 * { 
     box-sizing: border-box;
+    
 }
 
 html, body{
     margin:0;
     font-family: $body-font-family;
+    /*display: flex;
+    justify-content: center;  */
+   
 }
 h2{
     font-size:$f1-font-size ;
@@ -35,4 +39,10 @@ a{
 }
 h1,h4{
     font-family:$header-footer-font-family; 
+}
+
+.main-container{
+    // width: 100%;
+    max-width: 1440px;  
+    min-width: 320px;
 }
