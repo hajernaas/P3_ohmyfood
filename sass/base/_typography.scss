@@ -24,8 +24,8 @@ $f5-font-size: rem(14);
 html, body{
     margin:0;
     font-family: $body-font-family;
-    /*display: flex;
-    justify-content: center;  */
+    display: flex;
+    justify-content: center;  
    
 }
 h2{
@@ -42,7 +42,7 @@ h1,h4{
 }
 
 .main-container{
-    // width: 100%;
+    width: 100%;
     max-width: 1440px;  
     min-width: 320px;
 }
