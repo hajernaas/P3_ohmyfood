@@ -97,13 +97,13 @@
                 position : relative;
                
                 .card__heart-empty {
-                   visibility: visible;
+                  // visibility: visible;
                     @include position-absolute-heart;
                     @include dimension(23,23);
                 }
                   
                 .card__heart-full {
-                    visibility: hidden;
+                    //visibility: hidden;
                     opacity: 0;
                     @include position-absolute-heart;
                     transition-property: all;
@@ -127,7 +127,7 @@
                     }
                     */
                      .card__heart-full{            
-                        visibility: visible;
+                       // visibility: visible;
                         opacity: 1;
                         cursor: pointer;
                          color: transparent;
@@ -135,6 +135,7 @@
                          background-clip: text;
                          -webkit-background-clip:text;
                         @include position-absolute-heart;
+                        //transform: scale(1.2);
                     
                 }
             
