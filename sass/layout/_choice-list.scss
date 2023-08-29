@@ -9,7 +9,7 @@
        display: flex;
        flex-direction: column;
        justify-content: center;
-       align-items: flex-start;
+      //  align-items: flex-start;
        gap: 25px; 
        padding: rem(50) rem(180);
        margin:rem(30) 0;
@@ -21,7 +21,7 @@
    margin-right: rem(80);
    @media (min-width:1025px) {
    margin:0;
-   padding-left: 22px;
+   padding-left: 27px;
   }
 
    }
@@ -36,7 +36,7 @@
         display: flex;
         flex-direction: row; 
         justify-content: center; 
-        gap:25px;
+        gap:12px;
         align-items: center; 
         
    }
@@ -55,11 +55,11 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-    flex-grow:1;
+    //flex-grow:1;
     @media (min-width:1025px) {
       padding:rem(29.59) rem(50) rem(28.12) rem(35);
       // flex-shrink:2; 
-      //width:300px ;
+      width:rem(297);
      
      }
 

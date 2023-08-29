@@ -22,11 +22,11 @@
 
   <main>
 
-    <!-- Section localisation -->
-    <section class="location">
+    <!--localisation -->
+    <div class="location">
       <i class="fa-solid fa-location-dot location__icon"></i> 
       <input class="location__input" type="search" name="city" value="Paris,Belleville" placeholder="votre localisation">
-    </section>
+    </div>
 
     <!-- Section Explorer -->
     <section class="explorer">
@@ -49,96 +49,81 @@
     <section class="restaurants">
 
       <h2 class="restaurants__title">Restaurants</h2>
-
-      <article class="card">
-        <a href="./restaurants/la-palette-du-gout.html"> 
-        <p class="card__btn">Nouveau </p> 
-        <img class="card__img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût"> 
-        <div class="card__container">
-            <h3 class="card__title">La palette du goût</h3>
-            <div class="card__heart">
-              <input type="checkbox" id="activate1-div">
-              <label for="activate1-div">
-                <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">  
-                      <!-- <img class="card__heart-empty" src="./assets/images/icones/Like.svg" alt="heart">  -->
-                <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg"> 
-              </label>
+      <div class="restaurants__cards">  
+        <article class="card">
+          <a href="./restaurants/la-palette-du-gout.html"> 
+            <p class="card__btn">Nouveau </p> 
+            <img class="card__img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût"> 
+            <div class="card__container">
+                <h3 class="card__title">La palette du goût</h3>
+                <p class="card__subtitle">Ménilmontant</p> 
             </div>
-        </div>
-        <p class="card__subtitle">Ménilmontant</p>
-      </a>
-      </article>
-
-      <article class="card">
-        <a href="./restaurants/la-note-enchantée.html"> 
-        <p class="card__btn">Nouveau </p> 
-        <img class="card__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée"> 
-        <div class="card__container">
-            <h3 class="card__title">La note enchantée</h3>
-            <div class="card__heart">
-              <input type="checkbox" id="activate2-div">
-              <label for="activate2-div">
-                <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">  
-                      <!-- <img class="card__heart-empty" src="./assets/images/icones/Like.svg" alt="heart">  -->
-                <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg"> 
-              </label>
+          </a>
+          <div class="card__heart">
+            <input type="checkbox" id="activate1-div">
+            <label for="activate1-div">
+               <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">   
+               <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg" alt="heart" >  
+              <!-- <i class="fa-regular fa-heart card__heart-empty"></i> -->
+              <!-- <i class=" fa-solid fa-heart card__heart-full"></i> -->
+            </label>
+          </div>
+        </article>
+  
+        <article class="card">
+          <a href="./restaurants/la-note-enchantée.html"> 
+            <p class="card__btn">Nouveau </p> 
+            <img class="card__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée"> 
+            <div class="card__container">
+                <h3 class="card__title">La note enchantée</h3>
+                <p class="card__subtitle">Charonne</p> 
             </div>
-        </div>
-        <p class="card__subtitle">Charonne</p>
-      </a>
-      </article>
+          </a>
+          <div class="card__heart">
+            <input type="checkbox" id="activate2-div">
+            <label for="activate2-div">
+              <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">    
+              <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg" alt="heart" > 
+            </label>
+          </div>
+        </article>
 
-      <article class="card">
-        <a href="./restaurants/a-la-française.html">
-        <img class="card__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française"> 
-        <div class="card__container">
-            <h3 class="card__title">À la française</h3>
-            <div class="card__heart">
-              <input type="checkbox" id="activate3-div">
-              <label for="activate3-div">
-                <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">  
-                      <!-- <img class="card__heart-empty" src="./assets/images/icones/Like.svg" alt="heart">  -->
-                <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg"> 
-              </label>
+        <article class="card">
+          <a href="./restaurants/a-la-française.html">
+            <img class="card__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française"> 
+            <div class="card__container">
+                <h3 class="card__title">À la française</h3>
+                <p class="card__subtitle">Cité Rouge</p>
             </div>
-        </div>
-        <p class="card__subtitle">Cité Rouge</p>
-      </a>
-      </article>
+          </a>
+          <div class="card__heart">
+            <input type="checkbox" id="activate3-div">
+            <label for="activate3-div">
+              <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">     
+              <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg" alt="heart" > 
+            </label>
+          </div>
+        </article>
 
-      <article class="card">
-        <a href="./restaurants/le-délice-des-sens.html">  
-        <img class="card__img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le délice des sens"> 
-        <div class="card__container">
-            <h3 class="card__title">Le délice des sens</h3>
-            <div class="card__heart">
-              <input type="checkbox" id="activate4-div">
-              <label for="activate4-div">
-                <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">  
-                      <!-- <img class="card__heart-empty" src="./assets/images/icones/Like.svg" alt="heart">  -->
-                <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg"> 
-              </label>
+        <article class="card">
+          <a href="./restaurants/le-délice-des-sens.html">  
+            <img class="card__img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le délice des sens"> 
+            <div class="card__container">
+                <h3 class="card__title">Le délice des sens</h3>
+                <p class="card__subtitle">Folie-Méricourt</p>
             </div>
-        </div>
-        <p class="card__subtitle">Folie-Méricourt</p>
-      </a>
-      </article>
-      
-     </section>
-
-      
-               
-          
-          
-
-
-
-
- 
-
-
+          </a>
+          <div class="card__heart">
+            <input type="checkbox" id="activate4-div">
+            <label for="activate4-div">
+              <img class="card__heart-full" src="./assets/images/icones/Likefull.svg" alt="full-heart">  
+              <img class="card__heart-empty" src="./assets/images/icones/heart-like-svgrepo-com1.svg" alt="heart" > 
+            </label>
+          </div>
+        </article>
+      </div>  
+     </section>       
   </main>
-
 
   <!--Footer-->
   <footer class="footer">

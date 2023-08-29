@@ -19,18 +19,21 @@
     &__btn{
         @include dimension(218,50);
         border-radius:rem(map-get($radius,btn));
-        background-image: $background-image;
+        background-image: $button-gradient;
         @include box-shadow-btn;
         color: $white;
         border: none;
         font-size: $f4-font-size;
         font-weight:$medium-font-weight;
         padding: rem(13) rem(18.75);
+        transition: transform 200ms;
         
         &:hover {
-           @include lighten;
+          /* @include lighten;*/
             cursor: pointer;
-            color: $white;
+            transform:scale(1.02);
+            opacity:0.9;
+
           }
         
     }
