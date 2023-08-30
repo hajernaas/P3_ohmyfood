@@ -1,0 +1,145 @@
+
+
+.header{
+    
+    &__arrow {
+        position: absolute;
+        left: rem(38);
+        @include dimension(30,30);
+        top: 50%;
+      /*  display:flex;
+        align-items:center;
+        justify-content:center;*/
+        transform: translateY(-50%);
+        font-size:1.5rem;
+      }
+}
+
+.banner{
+    width: 100%;
+    object-fit: cover;
+    height: 275px; 
+   
+
+}
+
+.menu
+{
+    background-color:#F6F6F6 ;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+   /* width: 100%;*/
+    position: relative;
+    margin-top: -50px;
+
+&__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //padding: 10px;
+        padding:32px 17px 0px 17px;
+       // margin-bottom:40px;
+        font-family:$header-footer-font-family;
+        font-size: $f1-menupage;
+        font-weight:$regular-font-weight;
+        //padding-left: 7px;
+    
+        
+
+        .heart{
+           
+         position :relative;
+         top: 45px;
+         right: -12px;
+            @include heart;
+            #activate1-div 
+            {
+                display: none;
+                @include position-absolute-heart;
+            }
+        
+            #activate1-div:checked ~ label 
+            {
+                 .card__heart-full{            
+                    opacity: 1;
+                    cursor: pointer;
+                    color: transparent;
+                    background-image:$button-gradient;
+                    background-clip: text;
+                    -webkit-background-clip:text;
+                    @include position-absolute-heart;
+                
+                }
+        
+            }
+        
+        
+        }
+}
+
+}
+
+/*
+.menu{
+
+  &__section{
+    background-color: #f6f6f6;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+
+
+
+    h2{
+       
+        font-family:$header-footer-font-family;
+        font-size: $f1-menupage;
+        font-weight:$regular-font-weight;
+        padding-left: 7px;
+   
+        
+        }
+       .heart{
+           
+            position :relative;
+          
+            @include heart;
+            #activate1-div 
+            {
+                display: none;
+                @include position-absolute-heart;
+            }
+        
+            #activate1-div:checked ~ label 
+            {
+                 .card__heart-full{            
+                    opacity: 1;
+                    cursor: pointer;
+                    color: transparent;
+                    background-image:$button-gradient;
+                    background-clip: text;
+                    -webkit-background-clip:text;
+                    @include position-absolute-heart;
+                
+                }
+        
+            }
+        
+        }
+        
+  }
+   
+*/
+
+
+
+   
+
+       
+ 
+
+
+
+

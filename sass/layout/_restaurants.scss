@@ -6,11 +6,11 @@
    /* display: flex;    
     justify-content: center;
     flex-direction: column;*/
-    padding: 0px 180px; }
+    padding: 0 rem(180); }
     &__title{
         padding: rem(20) 0 0 rem(30);
         @media (min-width:1025px) {
-            margin-bottom: 28px; 
+            margin-bottom: rem(28); 
         }
       
     }
@@ -20,8 +20,8 @@
             @media (min-width:1025px) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                column-gap:70px;
-                row-gap: 35px;
+                column-gap:rem(70);
+                row-gap: rem(35);
                 /*display: flex;
                 justify-content: space-between;
                 flex-flow: row wrap;
@@ -37,7 +37,7 @@
             position: relative;
             background:$white; 
             margin: rem(20);
-            padding-bottom: 5px;
+            padding-bottom: rem(5);
            /* @media (min-width:1025px) {
             width: 40%;
             }*/
@@ -63,13 +63,11 @@
                 border-top-left-radius: rem(15);
                 border-top-right-radius: rem(15);
                 width: 100%;
-                max-height: 220px;
+                max-height: rem(220);
                 background-repeat: no-repeat;
                 @media (min-width:1025px) {
-                height:251px;;
+                height:rem(251);
                 }
-
-                // margin:10px;
             }  
             /*
            &__container {
@@ -93,23 +91,20 @@
         
              
             &__heart {
-    
                 position : relative;
-               
-                .card__heart-empty {
-                  // visibility: visible;
+                @include heart;
+               /*.card__heart-empty {
                     @include position-absolute-heart;
                     @include dimension(23,23);
                 }
                   
                 .card__heart-full {
-                    //visibility: hidden;
                     opacity: 0;
                     @include position-absolute-heart;
                     transition-property: all;
-                    transition-duration: 5s;
+                    transition-duration: 7s;
                 }
-    
+                */
 
                 #activate1-div 
                 {
@@ -119,25 +114,16 @@
             
                 #activate1-div:checked ~ label 
                 {
-                   /* .card__heart-empty {
-                        visibility: hidden;
-                        cursor: pointer;
-                        @include position-absolute-heart;
-                       
-                    }
-                    */
                      .card__heart-full{            
-                       // visibility: visible;
                         opacity: 1;
                         cursor: pointer;
-                         color: transparent;
-                         background-image:$button-gradient;
-                         background-clip: text;
-                         -webkit-background-clip:text;
+                        color: transparent;
+                        background-image:$button-gradient;
+                        background-clip: text;
+                        -webkit-background-clip:text;
                         @include position-absolute-heart;
-                        //transform: scale(1.2);
                     
-                }
+                    }
             
                 }
     
@@ -150,18 +136,17 @@
             
                 #activate2-div:checked ~ label 
                 {
-                    .card__heart-empty {
-                        visibility: hidden;
-                        cursor: pointer;
-                        @include position-absolute-heart;
-                       
-                    }
+                    
                      
                      .card__heart-full{            
-                        visibility: visible;
                         opacity: 1;
                         cursor: pointer;
+                        color: transparent;
+                        background-image:$button-gradient;
+                        background-clip: text;
+                        -webkit-background-clip:text;
                         @include position-absolute-heart;
+                        transition: 5s;
                 }
             
                 }
@@ -175,17 +160,15 @@
             
                 #activate3-div:checked ~ label 
                 {
-                    .card__heart-empty {
-                        visibility: hidden;
-                        cursor: pointer;
-                        @include position-absolute-heart;
-                       
-                    }
+                 
     
                      .card__heart-full{            
-                        visibility: visible;
                         opacity: 1;
                         cursor: pointer;
+                        color: transparent;
+                        background-image:$button-gradient;
+                        background-clip: text;
+                        -webkit-background-clip:text;
                         @include position-absolute-heart;
                 }
             
@@ -200,17 +183,15 @@
             
                 #activate4-div:checked ~ label 
                 {
-                    .card__heart-empty {
-                        visibility: hidden;
-                        cursor: pointer;
-                        @include position-absolute-heart;
-                       
-                    }
+                  
     
                      .card__heart-full{            
-                        visibility: visible;
                         opacity: 1;
                         cursor: pointer;
+                        color: transparent;
+                        background-image:$button-gradient;
+                        background-clip: text;
+                        -webkit-background-clip:text;
                         @include position-absolute-heart;
                 }
             
@@ -220,22 +201,17 @@
     
                 @media (min-width:1025px) {
                 &:hover {
-                    /*.card__heart-empty  {
-                        visibility: hidden;
-                        cursor: pointer;
-                       @include position-absolute-heart;
-                    }*/
-    
+                   
                     .card__heart-full {
                         visibility: visible;
                         @include position-absolute-heart;
-                       // transition: 1.5s;
                         color: transparent;
                         background-image:$button-gradient;
                         background-clip: text;
                         -webkit-background-clip:text;
                         opacity: 1;
                         cursor: pointer;
+                       
                     }
                 }
        

@@ -33,4 +33,17 @@
 
 }
 
+@mixin heart{
+    .card__heart-empty {
+        @include position-absolute-heart;
+        @include dimension(23,23);
+    }
+      
+    .card__heart-full {
+        opacity: 0;
+        @include position-absolute-heart;
+        transition-property: all;
+        transition-duration: 7s;
+    }
+}
 

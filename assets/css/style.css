@@ -196,7 +196,7 @@ h1, h4 {
     /* display: flex;    
      justify-content: center;
      flex-direction: column;*/
-    padding: 0px 180px;
+    padding: 0 11.25rem;
   }
 }
 .restaurants__title {
@@ -204,15 +204,15 @@ h1, h4 {
 }
 @media (min-width: 1025px) {
   .restaurants__title {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
   }
 }
 @media (min-width: 1025px) {
   .restaurants__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 70px;
-    row-gap: 35px;
+    column-gap: 4.375rem;
+    row-gap: 2.1875rem;
     /*display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -226,7 +226,7 @@ h1, h4 {
   position: relative;
   background: #FFF;
   margin: 1.25rem;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
   /* @media (min-width:1025px) {
    width: 40%;
    }*/
@@ -258,12 +258,12 @@ h1, h4 {
   border-top-left-radius: 0.9375rem;
   border-top-right-radius: 0.9375rem;
   width: 100%;
-  max-height: 220px;
+  max-height: 13.75rem;
   background-repeat: no-repeat;
 }
 @media (min-width: 1025px) {
   .restaurants__cards .card__img {
-    height: 251px;
+    height: 15.6875rem;
   }
 }
 .restaurants__cards .card__title {
@@ -279,6 +279,18 @@ h1, h4 {
 }
 .restaurants__cards .card__heart {
   position: relative;
+  /*.card__heart-empty {
+       @include position-absolute-heart;
+       @include dimension(23,23);
+   }
+
+   .card__heart-full {
+       opacity: 0;
+       @include position-absolute-heart;
+       transition-property: all;
+       transition-duration: 7s;
+   }
+   */
 }
 .restaurants__cards .card__heart .card__heart-empty {
   position: absolute;
@@ -293,22 +305,13 @@ h1, h4 {
   right: 1.5625rem;
   top: -3.4375rem;
   transition-property: all;
-  transition-duration: 5s;
+  transition-duration: 7s;
 }
 .restaurants__cards .card__heart #activate1-div {
   display: none;
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
-}
-.restaurants__cards .card__heart #activate1-div:checked ~ label {
-  /* .card__heart-empty {
-       visibility: hidden;
-       cursor: pointer;
-       @include position-absolute-heart;
-
-   }
-   */
 }
 .restaurants__cards .card__heart #activate1-div:checked ~ label .card__heart-full {
   opacity: 1;
@@ -327,20 +330,17 @@ h1, h4 {
   right: 1.5625rem;
   top: -3.4375rem;
 }
-.restaurants__cards .card__heart #activate2-div:checked ~ label .card__heart-empty {
-  visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5625rem;
-  top: -3.4375rem;
-}
 .restaurants__cards .card__heart #activate2-div:checked ~ label .card__heart-full {
-  visibility: visible;
   opacity: 1;
   cursor: pointer;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
+  transition: 5s;
 }
 .restaurants__cards .card__heart #activate3-div {
   display: none;
@@ -348,17 +348,13 @@ h1, h4 {
   right: 1.5625rem;
   top: -3.4375rem;
 }
-.restaurants__cards .card__heart #activate3-div:checked ~ label .card__heart-empty {
-  visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5625rem;
-  top: -3.4375rem;
-}
 .restaurants__cards .card__heart #activate3-div:checked ~ label .card__heart-full {
-  visibility: visible;
   opacity: 1;
   cursor: pointer;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
@@ -369,29 +365,18 @@ h1, h4 {
   right: 1.5625rem;
   top: -3.4375rem;
 }
-.restaurants__cards .card__heart #activate4-div:checked ~ label .card__heart-empty {
-  visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5625rem;
-  top: -3.4375rem;
-}
 .restaurants__cards .card__heart #activate4-div:checked ~ label .card__heart-full {
-  visibility: visible;
   opacity: 1;
   cursor: pointer;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
 }
 @media (min-width: 1025px) {
-  .restaurants__cards .card__heart:hover {
-    /*.card__heart-empty  {
-        visibility: hidden;
-        cursor: pointer;
-       @include position-absolute-heart;
-    }*/
-  }
   .restaurants__cards .card__heart:hover .card__heart-full {
     visibility: visible;
     position: absolute;
@@ -451,5 +436,133 @@ h1, h4 {
   font-size: 1rem;
   font-weight: 500;
 }
+
+.header__arrow {
+  position: absolute;
+  left: 2.375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  top: 50%;
+  /*  display:flex;
+    align-items:center;
+    justify-content:center;*/
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.banner {
+  width: 100%;
+  object-fit: cover;
+  height: 275px;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  /* width: 100%;*/
+  position: relative;
+  margin-top: -50px;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 17px 0px 17px;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.menu__title .heart {
+  position: relative;
+  top: 45px;
+  right: -12px;
+}
+.menu__title .heart .card__heart-empty {
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+  width: 1.4375rem;
+  height: 1.4375rem;
+}
+.menu__title .heart .card__heart-full {
+  opacity: 0;
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.menu__title .heart #activate1-div {
+  display: none;
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+}
+.menu__title .heart #activate1-div:checked ~ label .card__heart-full {
+  opacity: 1;
+  cursor: pointer;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+}
+
+/*
+.menu{
+
+  &__section{
+    background-color: #f6f6f6;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+
+
+
+    h2{
+
+        font-family:$header-footer-font-family;
+        font-size: $f1-menupage;
+        font-weight:$regular-font-weight;
+        padding-left: 7px;
+
+
+        }
+       .heart{
+
+            position :relative;
+
+            @include heart;
+            #activate1-div 
+            {
+                display: none;
+                @include position-absolute-heart;
+            }
+
+            #activate1-div:checked ~ label 
+            {
+                 .card__heart-full{            
+                    opacity: 1;
+                    cursor: pointer;
+                    color: transparent;
+                    background-image:$button-gradient;
+                    background-clip: text;
+                    -webkit-background-clip:text;
+                    @include position-absolute-heart;
+
+                }
+
+            }
+
+        }
+
+  }
+
+*/
 
 /*# sourceMappingURL=style.css.map */
