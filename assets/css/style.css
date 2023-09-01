@@ -2,11 +2,10 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  /*  display: flex;
-    justify-content: center;  */
 }
 
 h2 {
@@ -19,7 +18,8 @@ a {
   color: black;
 }
 
-h1, h4 {
+h1,
+h4 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -27,6 +27,14 @@ h1, h4 {
   width: 100%;
   max-width: 1440px;
   min-width: 320px;
+}
+
+@media (min-width: 1025px) {
+  .page-index {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .header {
@@ -109,7 +117,7 @@ h1, h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5625rem;
     padding: 3.125rem 11.25rem;
     margin: 1.875rem 0;
   }
@@ -121,7 +129,7 @@ h1, h4 {
 @media (min-width: 1025px) {
   .choice-list__title {
     margin: 0;
-    padding-left: 27px;
+    padding-left: 1.6875rem;
   }
 }
 .choice-list__ul {
@@ -279,18 +287,6 @@ h1, h4 {
 }
 .restaurants__cards .card__heart {
   position: relative;
-  /*.card__heart-empty {
-       @include position-absolute-heart;
-       @include dimension(23,23);
-   }
-
-   .card__heart-full {
-       opacity: 0;
-       @include position-absolute-heart;
-       transition-property: all;
-       transition-duration: 7s;
-   }
-   */
 }
 .restaurants__cards .card__heart .card__heart-empty {
   position: absolute;
@@ -316,10 +312,10 @@ h1, h4 {
 .restaurants__cards .card__heart #activate1-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
-  color: transparent;
-  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
@@ -378,7 +374,6 @@ h1, h4 {
 }
 @media (min-width: 1025px) {
   .restaurants__cards .card__heart:hover .card__heart-full {
-    visibility: visible;
     position: absolute;
     right: 1.5625rem;
     top: -3.4375rem;
@@ -435,6 +430,9 @@ h1, h4 {
   color: white;
   font-size: 1rem;
   font-weight: 500;
+}
+.footer__list--link .icon-footer {
+  padding-right: 0.6875rem;
 }
 
 .header__arrow {
@@ -510,59 +508,32 @@ h1, h4 {
   right: 1.5625rem;
   top: -3.4375rem;
 }
-
-/*
-.menu{
-
-  &__section{
-    background-color: #f6f6f6;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    width: 100%;
-    position: relative;
-    margin-top: -50px;
-
-
-
-    h2{
-
-        font-family:$header-footer-font-family;
-        font-size: $f1-menupage;
-        font-weight:$regular-font-weight;
-        padding-left: 7px;
-
-
-        }
-       .heart{
-
-            position :relative;
-
-            @include heart;
-            #activate1-div 
-            {
-                display: none;
-                @include position-absolute-heart;
-            }
-
-            #activate1-div:checked ~ label 
-            {
-                 .card__heart-full{            
-                    opacity: 1;
-                    cursor: pointer;
-                    color: transparent;
-                    background-image:$button-gradient;
-                    background-clip: text;
-                    -webkit-background-clip:text;
-                    @include position-absolute-heart;
-
-                }
-
-            }
-
-        }
-
-  }
-
-*/
+.menu__card .submenu {
+  margin-top: 2.5rem;
+  padding: 0 0.625rem;
+}
+.menu__card .submenu__title h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+.menu__card .submenu__title .line {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.menu__card .submenu__item {
+  background-color: white;
+  border-radius: 0.9375rem;
+  padding: 0.9375rem;
+  margin: 0.75rem;
+  box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* display: flex;
+   align-items: flex-end;
+   gap: 5px;
+  flex: 1 0 0; */
+}
 
 /*# sourceMappingURL=style.css.map */

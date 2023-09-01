@@ -64,8 +64,17 @@ survol sur desktop au lieu du clic
  * Le site doit être parfaitement compatible avec les dernières versions  de Chrome et Firefox.
 #  Installation et exécution 
 
+Pour consulter directement le projet , veuillez voir ce lien : 
+(https://hajernaas.github.io/P3_ohmyfood/)
 
-# Compétences évaluées :
+Sinon, clonez le projet
+git clone https://github.com/hajernaas/P3_ohmyfood.git
+
+Installez les dépendances
+npm install 
+npm run sass
+
+# Compétences évaluées 
 * Mettre en œuvre des effets CSS graphiques avancés
 * Mettre en place une structure de navigation pour un site web
 * Assurer la cohérence graphique d'un site web

@@ -10,7 +10,7 @@
        flex-direction: column;
        justify-content: center;
       //  align-items: flex-start;
-       gap: 25px; 
+       gap: rem(25); 
        padding: rem(50) rem(180);
        margin:rem(30) 0;
         
@@ -21,7 +21,7 @@
    margin-right: rem(80);
    @media (min-width:1025px) {
    margin:0;
-   padding-left: 27px;
+   padding-left: rem(27);
   }
 
    }

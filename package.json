@@ -1,0 +1,22 @@
+{
+  "name": "projet3-ohmyfood",
+  "version": "1.0.0",
+  "description": "mon projet openclassrooms p3 (Ohmyfood)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajernaas/P3_ohmyfood.git"
+  },
+  "author": "naas hajer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hajernaas/P3_ohmyfood/issues"
+  },
+  "homepage": "https://github.com/hajernaas/P3_ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

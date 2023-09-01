@@ -1,52 +1,47 @@
- .footer {
-  @media (min-width:1025px) {
-    padding: 30px 25px; 
-  }
-  
-    padding: rem(22) rem(25);
-    background:$grey;
-
-    &__title {
-        color: $white;
-        font-size: $f2-font-size;
-        font-weight:$regular-font-weight;
-        margin:0 0 rem(16) ;
-        padding-right: 0; 
-        @media (min-width:1025px) {
-          display: flex;
-          margin-bottom: -46px;
-          justify-content: flex-end;
-          align-items: flex-end;
-        }
-      }
-
-      &__list{
-        list-style-type: none;
-        padding:0;
-        @media (min-width:1025px) {
-          display: flex;
-          justify-content: flex-end;
-          align-items: flex-end;
-          gap: 18px;
-          margin-right: 150px;
-        }
-
-      }
-
-     &__list-li{
-       margin-top: rem(7);
-      }
-
-      &__list--link{
-        color:white;
-        font-size:$f4-font-size;
-        font-weight:$medium-font-weight;
-      }
+.footer {
+  @media (min-width: 1025px) {
+    padding: 30px 25px;
   }
 
-  
- 
+  padding: rem(22) rem(25);
+  background: $grey;
 
-  
-  
-  
+  &__title {
+    color: $white;
+    font-size: $f2-font-size;
+    font-weight: $regular-font-weight;
+    margin: 0 0 rem(16);
+    padding-right: 0;
+    @media (min-width: 1025px) {
+      display: flex;
+      margin-bottom: -46px;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    @media (min-width: 1025px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 18px;
+      margin-right: 150px;
+    }
+  }
+
+  &__list-li {
+    margin-top: rem(7);
+  }
+
+  &__list--link {
+    color: white;
+    font-size: $f4-font-size;
+    font-weight: $medium-font-weight;
+    .icon-footer {
+      padding-right: rem(11);
+    }
+  }
+}
