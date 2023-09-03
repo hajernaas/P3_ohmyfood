@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/css/style.css"> 
     <title>La palette du goût</title>
 </head>
-<body>
+<body class="page-palette">
     <!--Header-->
     <header class="header">
         <div class="header__arrow"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
@@ -36,116 +36,195 @@
 
             <div class="menu__card">
             <!-- Entrées -->
-                <div class="submenu">
+                <div class=" submenu starter">
                     <div class="submenu__title">
                         <h3>entrées</h3>
                         <div class="line"></div>
                     </div>
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Fricassée d'escargots</h4>
-                        <div class="submenu__desc-price">
-                            <p>Au piment d'Espelette </p>
-                            <span><strong>25€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                    <input type="checkbox" class="hidden" id="ck1">
+                    <label class="menu-bar" for="ck1"> 
+                        <span class="submenu__description">
+                            <span class="title">Fricassée d'escargots</span><br>
+                            <span  class="ingredients">Au piment d'Espelette </span>
+                        </span>
+                        <span class="submenu__price">25€</span> 
+                        <span class="submenu__check">
+                            <i class="fa-solid fa-circle-check icon-check "></i>
+                        </span>
+                    </label> 
                     </div>
+                    
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Foie gras de canard mi-cuit</h4>
-                        <div class="submenu__desc-price">
-                            <p>Et ses copeaux de truffe noire </p>
-                            <span><strong>35€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                         </div>
+                        <input type="checkbox" class="hidden" id="ck2">
+                        <label class="menu-bar" for="ck2"> 
+                            <span class="submenu__description">
+                                <span class="title">Foie gras de canard mi-cuit</span><br>
+                                <span  class="ingredients">Et ses copeaux de truffe noire </span>
+                            </span>
+                            <span class="submenu__price">35€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
+
+
+
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Œuf au plat</h4>
-                        <div class="submenu__desc-price">
-                            <p>Assaisonné à la truffe sur lit de caviar </p>
-                            <span><strong>20€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        <input type="checkbox" class="hidden" id="ck3">
+                        <label class="menu-bar" for="ck3"> 
+                            <span class="submenu__description">
+                                <span class="title">Œuf au plat</span><br>
+                                <span  class="ingredients">Assaisonné à la truffe sur lit de caviar </span>
+                            </span>
+                            <span class="submenu__price">20€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
                 </div>
 
             <!-- Plats -->
-                <div class="submenu">
+                <div class="submenu dish">
                     <div class="submenu__title">
-                        <h3>PLATS</h3>
+                        <h3>plats</h3>
                         <div class="line"></div>
                     </div>
+
+
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Filet de bœuf aux herbes</h4>
-                        <div class="submenu__desc-price">
-                            <p>Accompagné de sa ribambelle de légumes </p>
-                            <span><strong>40€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        <input type="checkbox" class="hidden" id="ck4">
+                        <label class="menu-bar" for="ck4"> 
+                            <span class="submenu__description">
+                                <span class="title">Filet de bœuf aux herbes</span><br>
+                                <span  class="ingredients">Accompagné de sa ribambelle de légumes </span>
+                            </span>
+                            <span class="submenu__price">40€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
+
+
+
+
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Parmentier de queue de bœuf</h4>
-                        <div class="submenu__desc-price">
-                            <p>À la truffe noire sur sa purée de panais </p>
-                            <span><strong>35€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        <input type="checkbox" class="hidden" id="ck5">
+                        <label class="menu-bar" for="ck5"> 
+                            <span class="submenu__description">
+                                <span class="title">Parmentier de queue de bœuf</span><br>
+                                <span  class="ingredients">À la truffe noire sur sa purée de panais</span>
+                            </span>
+                            <span class="submenu__price">35€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
+
                     <div class="submenu__item">
-                        <h4 class="submenu__title">Filet de turbot</h4>
-                        <div class="submenu__desc-price">
-                            <p>Aux agrumes</p>
-                            <span><strong>44€</strong></p>
-                        </div>
-                        <div class="submenu__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        <input type="checkbox" class="hidden" id="ck6">
+                        <label class="menu-bar" for="ck6"> 
+                            <span class="submenu__description">
+                                <span class="title">Filet de turbot</span><br>
+                                <span  class="ingredients">Aux agrumes</span>
+                            </span>
+                            <span class="submenu__price">44€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
+
                 </div>
+
+
+
+
+
             <!-- Desserts -->
-                <div class="submenu">
+                <div class="submenu desserts">
                     <div class="submenu__title">
-                        <h3>DESSERTS</h3>
+                        <h3>Desserts</h3>
                         <div class="line"></div>
                     </div>
+
+
                     <div class="submenu__item">
-                    <h4 class="submenu__title">Paris-Brest</h4>
-                    <div class="submenu__desc-price">
-                        <p>Revisité</p>
-                        <span><strong>18€</strong></p>
+                        <input type="checkbox" class="hidden" id="ck7">
+                        <label class="menu-bar" for="ck7"> 
+                            <span class="submenu__description">
+                                <span class="title">Paris-Brest</span><br>
+                                <span  class="ingredients">Revisité</span>
+                            </span>
+                            <span class="submenu__price">18€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
-                    <div class="submenu__check">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    </div>
+
+
                     <div class="submenu__item">
-                    <h4 class="submenu__title">Macaron au chocolat d'exception </h4>
-                    <div class="submenu__desc-price">
-                        <p>Et glace à la vanille de Madagascar</p>
-                        <span><strong>22€</strong></p>
+                        <input type="checkbox" class="hidden" id="ck8">
+                        <label class="menu-bar" for="ck8"> 
+                            <span class="submenu__description">
+                                <span class="title">Macaron au chocolat d'exception</span><br>
+                                <span  class="ingredients">Et glace à la vanille de Madagascar</span>
+                            </span>
+                            <span class="submenu__price">22€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
-                    <div class="submenu__check">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    </div>
+
+
+
+
+                    
+
+
                     <div class="submenu__item">
-                    <h4 class="submenu__title">Mousse au chocolat </h4>
-                    <div class="submenu__desc-price">
-                        <p>Au piment d'Espelette et à la truffe noire </p>
-                        <span><strong>23€</strong></p>
+                        <input type="checkbox" class="hidden" id="ck9">
+                        <label class="menu-bar" for="ck9"> 
+                            <span class="submenu__description">
+                                <span class="title">Mousse au chocolat</span><br>
+                                <span  class="ingredients">Au piment d'Espelette et à la truffe noire</span>
+                            </span>
+                            <span class="submenu__price">23€</span> 
+                            <span class="submenu__check">
+                                <i class="fa-solid fa-circle-check icon-check "></i>
+                            </span>
+                        </label> 
                     </div>
-                    <div class="submenu__check">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    </div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
                 </div>
             </div>
             <div class="order">
@@ -161,8 +240,8 @@
     <footer class="footer">
         <h4 class="footer__title">ohmyfood</h4>
         <ul class="footer__list">
-            <li class="footer__list-li"><a class="footer__list--link" href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
-            <li class="footer__list-li"><a class="footer__list--link" href="#">  <i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li class="footer__list-li"><a class="footer__list--link" href="#"><i class="fa-solid fa-utensils icon-footer"></i> Proposer un restaurant</a></li>
+            <li class="footer__list-li"><a class="footer__list--link" href="#">  <i class="fa-solid fa-handshake-angle icon-footer"></i>Devenir partenaire</a></li>
             <li class="footer__list-li"><a class="footer__list--link" href="#">Mentions légales</a></li>
             <li class="footer__list-li"><a class="footer__list--link" href="mailto:contact.ohmyfood@gmail.com">Contact</a></li>
         </ul>

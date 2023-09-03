@@ -14,7 +14,8 @@ $f1-font-size: rem(24);
 $f2-font-size: rem(18);
 $f3-font-size: rem(17);
 $f4-font-size: rem(16);
-$f5-font-size: rem(14);
+$f5-font-size: rem(15);
+$f6-font-size: rem(14);
 $f1-menupage: rem(28);
 
 * {
@@ -36,8 +37,7 @@ a {
   text-decoration: none;
   color: black;
 }
-h1,
-h4 {
+h1 {
   font-family: $header-footer-font-family;
 }
 

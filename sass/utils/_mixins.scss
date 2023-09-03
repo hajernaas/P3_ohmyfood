@@ -1,49 +1,51 @@
 //mixins
-@mixin dimension($width,$height){
-    width: rem($width);
-    height:rem($height); 
+@mixin dimension($width, $height) {
+  width: rem($width);
+  height: rem($height);
 }
 
-@mixin box-shadow-badge
-{
-    box-shadow: 0 rem(2) rem(4) 0 $border-box-shadow-badge ;
+@mixin box-shadow-badge {
+  box-shadow: 0 rem(2) rem(4) 0 $border-box-shadow-badge;
 }
 
-@mixin box-shadow-btn
-{
-    box-shadow: 0 rem(4) rem(10) 0 $border-box-shadow-btn;
+@mixin box-shadow-btn {
+  box-shadow: 0 rem(4) rem(10) 0 $border-box-shadow-btn;
 }
 
-@mixin box-shadow-menu
-{
-    box-shadow: 0 rem(4) rem(15) 0 $border-box-shadow-menu;
+@mixin box-shadow-menu {
+  box-shadow: 0 rem(4) rem(15) 0 $border-box-shadow-menu;
 }
 
-@mixin lighten 
-{
-    background-color: lighten($color-primary, 10%);
-    background-blend-mode: lighten; 
-    opacity: 1;
+@mixin box-shadow-btn-animation {
+  box-shadow: 0 rem(4) rem(10) 0 $border-box-shadow-btn-anim;
+}
+@mixin lighten {
+  background-color: lighten($color-primary, 10%);
+  background-blend-mode: lighten;
+  opacity: 1;
 }
 
-@mixin position-absolute-heart{
-    position:  absolute;
-    right: rem(25);
-    top:rem(-55);
-
+@mixin position-absolute-heart {
+  position: absolute;
+  right: rem(25);
+  top: rem(-55);
 }
 
-@mixin heart{
-    .card__heart-empty {
-        @include position-absolute-heart;
-        @include dimension(23,23);
-    }
-      
-    .card__heart-full {
-        opacity: 0;
-        @include position-absolute-heart;
-        transition-property: all;
-        transition-duration: 7s;
-    }
+@mixin heart {
+  .card__heart-empty {
+    @include position-absolute-heart;
+    @include dimension(23, 23);
+  }
+
+  .card__heart-full {
+    opacity: 0;
+    @include position-absolute-heart;
+    transition-property: all;
+    transition-duration: 7s;
+  }
 }
 
+@mixin radius-page-menu {
+  border-top-left-radius: rem(40);
+  border-top-right-radius: rem(40);
+}
