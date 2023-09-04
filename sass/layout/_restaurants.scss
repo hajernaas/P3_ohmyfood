@@ -88,72 +88,17 @@
         position: relative;
         @include heart;
 
-        #activate1-div {
-          display: none;
-          @include position-absolute-heart;
-        }
-
-        #activate1-div:checked ~ label {
-          .card__heart-full {
-            opacity: 1;
-            cursor: pointer;
-            background-clip: text;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-image: $button-gradient;
+        @for $i from 1 through 5 {
+          #activate#{$i}-div {
+            display: none;
             @include position-absolute-heart;
           }
-        }
 
-        #activate2-div {
-          display: none;
-          @include position-absolute-heart;
-        }
-
-        #activate2-div:checked ~ label {
-          .card__heart-full {
-            opacity: 1;
-            cursor: pointer;
-            color: transparent;
-            background-image: $button-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            @include position-absolute-heart;
-            transition: 5s;
-          }
-        }
-
-        #activate3-div {
-          display: none;
-          @include position-absolute-heart;
-        }
-
-        #activate3-div:checked ~ label {
-          .card__heart-full {
-            opacity: 1;
-            cursor: pointer;
-            color: transparent;
-            background-image: $button-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            @include position-absolute-heart;
-          }
-        }
-
-        #activate4-div {
-          display: none;
-          @include position-absolute-heart;
-        }
-
-        #activate4-div:checked ~ label {
-          .card__heart-full {
-            opacity: 1;
-            cursor: pointer;
-            color: transparent;
-            background-image: $button-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            @include position-absolute-heart;
+          #activate#{$i}-div:checked ~ label {
+            .card__heart-full {
+              @include heart_checked;
+              @include position-absolute-heart;
+            }
           }
         }
 
@@ -162,12 +107,7 @@
             .card__heart-full {
               //visibility: visible;
               @include position-absolute-heart;
-              color: transparent;
-              background-image: $button-gradient;
-              background-clip: text;
-              -webkit-background-clip: text;
-              opacity: 1;
-              cursor: pointer;
+              @include heart_checked;
             }
           }
         }

@@ -2,6 +2,7 @@
   background-color: $background-color;
   padding: rem(40) 0;
   text-align: center;
+
   &__title {
     font-size: $f1-font-size;
     font-weight: $bold-font-weight;
@@ -16,24 +17,12 @@
 
   &__btn {
     @include dimension(218, 50);
-    border-radius: rem(map-get($radius, btn));
-    background-image: $button-gradient;
-    @include box-shadow-btn;
-    color: $white;
-    border: none;
-    font-size: $f4-font-size;
-    font-weight: $medium-font-weight;
     padding: rem(13) rem(18.75);
-    transition: transform 200ms;
+    @extend .btn;
 
     &:hover {
-      /* @include lighten;*/
-      cursor: pointer;
-      background-color: lighten($color-primary, 10),
-        lighten($color-secondary, 10);
+      @extend .btn-hover;
       @include box-shadow-btn-animation;
-      transform: scale(1.01);
-      opacity: 0.85;
     }
   }
 }

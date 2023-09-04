@@ -21,7 +21,7 @@
 .menu {
   background-color: #f6f6f6;
   @include radius-page-menu;
-  //width: 100%;
+  width: 100%;
   position: relative;
   margin-top: rem(-50);
 
@@ -59,12 +59,28 @@
         }
       }
     }
+
+    @media (min-width: 1025px) {
+      justify-content: center;
+      gap: 60px;
+    }
   }
 
   &__card {
     .submenu {
       margin-top: rem(40);
       padding: 0 rem(10);
+      animation-fill-mode: none;
+      &-1 {
+        animation: progressive-display-menu 3s 2s ease-in-out;
+      }
+      &-2 {
+        animation: progressive-display-menu 6s 4s ease-in-out;
+      }
+      &-3 {
+        animation: progressive-display-menu 9s 6s ease-in-out;
+      }
+
       &__title {
         h3 {
           font-size: $f4-font-size;
@@ -74,8 +90,6 @@
         }
 
         .line {
-          /*  width: 40px;
-          height: 3px;*/
           @include dimension(40, 3);
           background-color: $color-tertiary;
         }
@@ -100,64 +114,16 @@
           //top: 200px;
         }
 
-        #ck1:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
+        @for $i from 1 through 10 {
+          #ck#{$i}:checked ~ label {
+            cursor: pointer;
+            .submenu__check {
+              margin-right: 0px;
+            }
 
-        #ck2:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-
-        #ck3:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-
-        #ck4:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-
-        #ck5:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-        #ck6:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-        #ck7:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-
-        #ck8:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
-          }
-        }
-
-        #ck9:checked ~ label {
-          cursor: pointer;
-          .submenu__check {
-            margin-right: 0px;
+            .icon-check {
+              animation: right-left-rotation 0.5s ease-in-out;
+            }
           }
         }
       }
@@ -210,5 +176,25 @@
         }
       }
     }
+  }
+
+  &__order {
+    text-align: center;
+    .btn {
+      @include dimension(186, 50);
+      padding: rem(16) rem(48);
+      margin: rem(40) 0;
+      @extend .btn;
+      &:hover {
+        @extend .btn-hover;
+        @include box-shadow-btn-animation;
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    width: 70%;
+    margin: auto;
+    margin-top: rem(-50);
   }
 }

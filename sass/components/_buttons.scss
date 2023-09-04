@@ -1,0 +1,17 @@
+.btn {
+  border-radius: rem(map-get($radius, btn));
+  background-image: $button-gradient;
+  @include box-shadow-btn;
+  color: $white;
+  border: none;
+  font-size: $f4-font-size;
+  font-weight: $medium-font-weight;
+  transition: transform 200ms;
+}
+
+.btn-hover {
+  cursor: pointer;
+  background-color: lighten($color-primary, 10%), lighten($color-secondary, 10%);
+  transform: scale(1.01);
+  opacity: 0.85;
+}

@@ -1,3 +1,4 @@
+@use "sass:math" as math;
 //colors
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
@@ -35,3 +36,8 @@ $radius: (
   btn-new: 3,
   steps-menu: 50,
 );
+
+//animation
+$nbr-submenu: 3;
+$anim-dur: 3000ms;
+$anim-delay: math.div(1 * $anim-dur, $nbr-submenu);

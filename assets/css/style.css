@@ -36,6 +36,49 @@ h1 {
   }
 }
 
+@keyframes right-left-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes progressive-display-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn, .menu__order .btn, .menu__order .explorer__btn, .explorer__btn {
+  border-radius: 1.5625rem;
+  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 200ms;
+}
+
+.btn-hover, .menu__order .btn:hover, .menu__order .explorer__btn:hover, .explorer__btn:hover {
+  cursor: pointer;
+  background-color: #ae80e5, #fface8;
+  transform: scale(1.01);
+  opacity: 0.85;
+}
+
 .header {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
@@ -88,23 +131,10 @@ h1 {
 .explorer__btn {
   width: 13.625rem;
   height: 3.125rem;
-  border-radius: 1.5625rem;
-  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.25);
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
   padding: 0.8125rem 1.171875rem;
-  transition: transform 200ms;
 }
 .explorer__btn:hover {
-  /* @include lighten;*/
-  cursor: pointer;
-  background-color: #ae80e5, #fface8;
   box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.35);
-  transform: scale(1.01);
-  opacity: 0.85;
 }
 
 .choice-list {
@@ -330,14 +360,13 @@ h1 {
 .restaurants__cards .card__heart #activate2-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
-  color: transparent;
-  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
+  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
-  transition: 5s;
 }
 .restaurants__cards .card__heart #activate3-div {
   display: none;
@@ -348,10 +377,10 @@ h1 {
 .restaurants__cards .card__heart #activate3-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
-  color: transparent;
-  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
+  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
@@ -365,10 +394,27 @@ h1 {
 .restaurants__cards .card__heart #activate4-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
-  color: transparent;
-  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
+  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+}
+.restaurants__cards .card__heart #activate5-div {
+  display: none;
+  position: absolute;
+  right: 1.5625rem;
+  top: -3.4375rem;
+}
+.restaurants__cards .card__heart #activate5-div:checked ~ label .card__heart-full {
+  opacity: 1;
+  cursor: pointer;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
@@ -378,12 +424,12 @@ h1 {
     position: absolute;
     right: 1.5625rem;
     top: -3.4375rem;
-    color: transparent;
-    background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-    background-clip: text;
-    -webkit-background-clip: text;
     opacity: 1;
     cursor: pointer;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   }
 }
 
@@ -460,6 +506,7 @@ h1 {
   background-color: #f6f6f6;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
+  width: 100%;
   position: relative;
   margin-top: -3.125rem;
 }
@@ -509,9 +556,25 @@ h1 {
   right: 1.5625rem;
   top: -3.4375rem;
 }
+@media (min-width: 1025px) {
+  .menu__title {
+    justify-content: center;
+    gap: 60px;
+  }
+}
 .menu__card .submenu {
   margin-top: 2.5rem;
   padding: 0 0.625rem;
+  animation-fill-mode: none;
+}
+.menu__card .submenu-1 {
+  animation: progressive-display-menu 3s 2s ease-in-out;
+}
+.menu__card .submenu-2 {
+  animation: progressive-display-menu 6s 4s ease-in-out;
+}
+.menu__card .submenu-3 {
+  animation: progressive-display-menu 9s 6s ease-in-out;
 }
 .menu__card .submenu__title h3 {
   font-size: 1rem;
@@ -520,8 +583,6 @@ h1 {
   margin: 0 0 0.75rem 0;
 }
 .menu__card .submenu__title .line {
-  /*  width: 40px;
-  height: 3px;*/
   width: 2.5rem;
   height: 0.1875rem;
   background-color: #99e2d0;
@@ -547,11 +608,17 @@ h1 {
 .menu__card .submenu__item #ck1:checked ~ label .submenu__check {
   margin-right: 0px;
 }
+.menu__card .submenu__item #ck1:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
 .menu__card .submenu__item #ck2:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck2:checked ~ label .submenu__check {
   margin-right: 0px;
+}
+.menu__card .submenu__item #ck2:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
 }
 .menu__card .submenu__item #ck3:checked ~ label {
   cursor: pointer;
@@ -559,11 +626,17 @@ h1 {
 .menu__card .submenu__item #ck3:checked ~ label .submenu__check {
   margin-right: 0px;
 }
+.menu__card .submenu__item #ck3:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
 .menu__card .submenu__item #ck4:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck4:checked ~ label .submenu__check {
   margin-right: 0px;
+}
+.menu__card .submenu__item #ck4:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
 }
 .menu__card .submenu__item #ck5:checked ~ label {
   cursor: pointer;
@@ -571,11 +644,17 @@ h1 {
 .menu__card .submenu__item #ck5:checked ~ label .submenu__check {
   margin-right: 0px;
 }
+.menu__card .submenu__item #ck5:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
 .menu__card .submenu__item #ck6:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck6:checked ~ label .submenu__check {
   margin-right: 0px;
+}
+.menu__card .submenu__item #ck6:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
 }
 .menu__card .submenu__item #ck7:checked ~ label {
   cursor: pointer;
@@ -583,17 +662,35 @@ h1 {
 .menu__card .submenu__item #ck7:checked ~ label .submenu__check {
   margin-right: 0px;
 }
+.menu__card .submenu__item #ck7:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
 .menu__card .submenu__item #ck8:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck8:checked ~ label .submenu__check {
   margin-right: 0px;
 }
+.menu__card .submenu__item #ck8:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
 .menu__card .submenu__item #ck9:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck9:checked ~ label .submenu__check {
   margin-right: 0px;
+}
+.menu__card .submenu__item #ck9:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
+}
+.menu__card .submenu__item #ck10:checked ~ label {
+  cursor: pointer;
+}
+.menu__card .submenu__item #ck10:checked ~ label .submenu__check {
+  margin-right: 0px;
+}
+.menu__card .submenu__item #ck10:checked ~ label .icon-check {
+  animation: right-left-rotation 0.5s ease-in-out;
 }
 .menu__card .submenu__description {
   overflow: hidden;
@@ -636,6 +733,25 @@ h1 {
 }
 .menu__card .submenu__check .icon-check {
   color: #fff;
+}
+.menu__order {
+  text-align: center;
+}
+.menu__order .btn, .menu__order .explorer__btn {
+  width: 11.625rem;
+  height: 3.125rem;
+  padding: 1rem 3rem;
+  margin: 2.5rem 0;
+}
+.menu__order .btn:hover, .menu__order .explorer__btn:hover {
+  box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 1025px) {
+  .menu {
+    width: 70%;
+    margin: auto;
+    margin-top: -3.125rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

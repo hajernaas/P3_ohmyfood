@@ -45,6 +45,15 @@
   }
 }
 
+@mixin heart_checked {
+  opacity: 1;
+  cursor: pointer;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: $button-gradient;
+}
+
 @mixin radius-page-menu {
   border-top-left-radius: rem(40);
   border-top-right-radius: rem(40);
