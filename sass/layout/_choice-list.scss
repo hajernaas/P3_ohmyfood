@@ -5,12 +5,13 @@
   counter-reset: steps;
 
   @media (min-width: 1025px) {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    //  align-items: flex-start;
-    gap: rem(25);
-    padding: rem(50) rem(180);
+      align-items: flex-start;
+    gap: rem(25);*/
+    //padding: rem(50) rem(180);
+    padding: rem(30) rem(160);
     margin: rem(30) 0;
   }
 
@@ -18,10 +19,10 @@
     padding: rem(10);
     margin: rem(15) 0;
 
-    @media (min-width: 1025px) {
+    /*  @media (min-width: 1025px) {
       margin: 0;
       padding-left: rem(55);
-    }
+    }*/
   }
 
   &__ul {
@@ -32,9 +33,9 @@
     @media (min-width: 1025px) {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      //  justify-content: center;
       //  gap: rem(35);
-      gap: rem(30);
+      gap: rem(43) rem(100);
       align-items: center;
     }
   }
@@ -53,15 +54,17 @@
     @include box-shadow-menu;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    //justify-content: flex-start;
     align-items: center;
-    flex-wrap: nowrap;
+    //  flex-wrap: nowrap;
     //flex-grow:1;
     @media (min-width: 1025px) {
       //padding: rem(29.59) rem(50) rem(28.12) rem(35);
       // flex-shrink:2;
-      padding: rem(20) rem(35);
-      width: rem(297);
+      //  padding: rem(20) rem(35);
+      // width: rem(300);
+      flex-grow: 1;
+      //justify-content: space-around;
     }
 
     &:last-child > i {
@@ -76,14 +79,15 @@
       background-color: $color-primary;
       padding: rem(6);
       @include dimension(16, 16);
-      border-radius: rem(map-get($radius, steps-menu));
+      // border-radius: rem(map-get($radius, steps-menu));
+      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-left: rem(-40);
-      @media (min-width: 1025px) {
-        margin-left: rem(-50);
-      }
+      /*  @media (min-width: 1025px) {
+        margin-left: rem(-40);
+      }*/
 
       /* position: absolute;
         bottom: 1.5rem;
@@ -92,10 +96,10 @@
   }
   &__icon {
     // margin-right: rem(15);
-    margin-right: rem(7);
+    margin-right: rem(10);
     color: $grey-1;
     font-size: $f2-font-size;
     // margin-left: rem(20);
-    margin-left: rem(10);
+    margin-left: rem(12);
   }
 }
