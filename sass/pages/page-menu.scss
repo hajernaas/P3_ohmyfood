@@ -1,13 +1,14 @@
 .header {
   &__arrow {
     position: absolute;
-    left: rem(38);
+    // left: rem(38);
+    left: rem(20);
     @include dimension(30, 30);
-    top: 50%;
+    top: 40%;
     /*  display:flex;
         align-items:center;
         justify-content:center;*/
-    transform: translateY(-50%);
+    transform: translateY(-40%);
     font-size: $f1-font-size;
   }
 }

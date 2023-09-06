@@ -2,20 +2,19 @@
   0% {
     transform: rotate(0);
   }
+
   25% {
     transform: rotate(90deg);
   }
+
   50% {
     transform: rotate(180deg);
   }
-  75% {
-    transform: rotate(270deg);
-  }
+
   100% {
     transform: rotate(360deg);
   }
 }
-
 @keyframes progressive-display-menu-mobile {
   from {
     transform: scaleY(0.5) translateX(50%);
@@ -35,5 +34,35 @@
   to {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+@keyframes loader_fade_out {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-inverse {
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

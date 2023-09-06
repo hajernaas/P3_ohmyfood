@@ -1,12 +1,12 @@
-.header{
-  
-    @include box-shadow-badge;
-    padding:rem(14) rem(89) rem(13) rem(89);
-    margin:0;
-    position: relative;
-    &__logo{
-        text-align: center;
-    }
-    //@include header-menu;
-
+.header {
+  @include box-shadow-badge;
+  padding: rem(14) rem(89) rem(13) rem(89);
+  // padding: rem(14) 0 rem(14) 0;
+  margin: 0;
+  position: relative;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
