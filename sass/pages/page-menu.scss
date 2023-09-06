@@ -42,12 +42,12 @@
       top: rem(45);
       right: rem(-12);
       @include heart;
-      #activate1-div {
+      #activate-div {
         display: none;
         @include position-absolute-heart;
       }
 
-      #activate1-div:checked ~ label {
+      #activate-div:checked ~ label {
         .card__heart-full {
           opacity: 1;
           cursor: pointer;
@@ -56,6 +56,16 @@
           background-clip: text;
           -webkit-background-clip: text;
           @include position-absolute-heart;
+        }
+      }
+
+      @media (min-width: 1025px) {
+        &:hover {
+          .card__heart-full {
+            //visibility: visible;
+            @include position-absolute-heart;
+            @include heart_filling;
+          }
         }
       }
     }
@@ -70,15 +80,11 @@
     .submenu {
       margin-top: rem(40);
       padding: 0 rem(10);
-      animation-fill-mode: none;
-      &-1 {
-        animation: progressive-display-menu 3s 2s ease-in-out;
-      }
-      &-2 {
-        animation: progressive-display-menu 6s 4s ease-in-out;
-      }
-      &-3 {
-        animation: progressive-display-menu 9s 6s ease-in-out;
+
+      @for $i from 1 through $nbr-submenu {
+        &:nth-child(#{$i}) {
+          animation-delay: $anim-delay * $i;
+        }
       }
 
       &__title {
@@ -106,6 +112,11 @@
           position: relative;
           overflow: hidden;
           //white-space: nowrap;
+
+          /*   @media (min-width: 1025px) {
+            animation: progressive-display-menuItem-desktop 1s;
+            animation-fill-mode: both;
+          }*/
         }
 
         .hidden {
@@ -114,9 +125,21 @@
           //top: 200px;
         }
 
-        @for $i from 1 through 10 {
+        @for $i from 1 through 9 {
           #ck#{$i}:checked ~ label {
             cursor: pointer;
+            .submenu__check {
+              margin-right: 0px;
+            }
+
+            .icon-check {
+              animation: right-left-rotation 0.5s ease-in-out;
+            }
+          }
+        }
+
+        @media (min-width: 1025px) {
+          &:hover {
             .submenu__check {
               margin-right: 0px;
             }
@@ -175,6 +198,9 @@
           color: $white;
         }
       }
+
+      animation: progressive-display-menu-mobile 3s ease-in-out;
+      animation-fill-mode: backwards;
     }
   }
 

@@ -16,13 +16,24 @@
   }
 }
 
-@keyframes progressive-display-menu {
+@keyframes progressive-display-menu-mobile {
   from {
+    transform: scaleY(0.5) translateX(50%);
     opacity: 0;
-    // transform: scaleY(0.5) translateX(50%);
   }
   to {
-    //transform: scaleY(1) translateX(0%);
+    transform: scaleY(1) translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes progressive-display-menuItem-desktop {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
     opacity: 1;
   }
 }

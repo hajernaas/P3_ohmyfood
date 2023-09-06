@@ -38,6 +38,6 @@ $radius: (
 );
 
 //animation
-$nbr-submenu: 3;
-$anim-dur: 3000ms;
+$nbr-submenu: 4;
+$anim-dur: 2000ms;
 $anim-delay: math.div(1 * $anim-dur, $nbr-submenu);

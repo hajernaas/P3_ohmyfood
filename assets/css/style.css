@@ -53,11 +53,23 @@ h1 {
     transform: rotate(360deg);
   }
 }
-@keyframes progressive-display-menu {
+@keyframes progressive-display-menu-mobile {
   from {
+    transform: scaleY(0.5) translateX(50%);
     opacity: 0;
   }
   to {
+    transform: scaleY(1) translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes progressive-display-menuItem-desktop {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -138,9 +150,9 @@ h1 {
 }
 
 .choice-list {
-  padding: 0 20px;
-  margin-top: 3rem;
-  margin-bottom: 4.25rem;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
   counter-reset: steps;
 }
 @media (min-width: 1025px) {
@@ -154,19 +166,18 @@ h1 {
   }
 }
 .choice-list__title {
-  margin-left: 1.25rem;
-  margin-right: 5rem;
+  padding: 0.625rem;
+  margin: 0.9375rem 0;
 }
 @media (min-width: 1025px) {
   .choice-list__title {
     margin: 0;
-    padding-left: 1.6875rem;
+    padding-left: 3.4375rem;
   }
 }
 .choice-list__ul {
   list-style-type: none;
-  padding-left: 20px;
-  list-style-type: none;
+  padding-left: 1.125rem;
   margin: 0;
 }
 @media (min-width: 1025px) {
@@ -174,15 +185,16 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 12px;
+    gap: 1.875rem;
     align-items: center;
   }
 }
 .choice-list__li {
+  position: relative;
   background-color: #f6f6f6;
   border-radius: 1.25rem;
-  padding: 1.786875rem 1.5625rem 1.7575rem 2.1875rem;
-  margin: 1.625rem 1.25rem 1.5575rem 1.25rem;
+  padding: 1.25rem 1.5625rem;
+  margin-bottom: 1.875rem;
   font-size: 1rem;
   font-weight: 500;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
@@ -194,7 +206,7 @@ h1 {
 }
 @media (min-width: 1025px) {
   .choice-list__li {
-    padding: 1.849375rem 3.125rem 1.7575rem 2.1875rem;
+    padding: 1.25rem 2.1875rem;
     width: 18.5625rem;
   }
 }
@@ -214,16 +226,21 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -3.25rem;
+  margin-left: -2.5rem;
   /* position: absolute;
-   bottom: 1.5rem;
-   left: -1rem;*/
+    bottom: 1.5rem;
+    left: -1rem;*/
+}
+@media (min-width: 1025px) {
+  .choice-list__li::before {
+    margin-left: -3.125rem;
+  }
 }
 .choice-list__icon {
-  margin-right: 1.5625rem;
+  margin-right: 0.4375rem;
   color: #7e7e7e;
   font-size: 1.125rem;
-  margin-left: 1.25rem;
+  margin-left: 0.625rem;
 }
 
 .restaurants {
@@ -539,13 +556,13 @@ h1 {
   transition-property: all;
   transition-duration: 7s;
 }
-.menu__title .heart #activate1-div {
+.menu__title .heart #activate-div {
   display: none;
   position: absolute;
   right: 1.5625rem;
   top: -3.4375rem;
 }
-.menu__title .heart #activate1-div:checked ~ label .card__heart-full {
+.menu__title .heart #activate-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
   color: transparent;
@@ -557,6 +574,19 @@ h1 {
   top: -3.4375rem;
 }
 @media (min-width: 1025px) {
+  .menu__title .heart:hover .card__heart-full {
+    position: absolute;
+    right: 1.5625rem;
+    top: -3.4375rem;
+    opacity: 1;
+    cursor: pointer;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  }
+}
+@media (min-width: 1025px) {
   .menu__title {
     justify-content: center;
     gap: 60px;
@@ -565,16 +595,20 @@ h1 {
 .menu__card .submenu {
   margin-top: 2.5rem;
   padding: 0 0.625rem;
-  animation-fill-mode: none;
+  animation: progressive-display-menu-mobile 3s ease-in-out;
+  animation-fill-mode: backwards;
 }
-.menu__card .submenu-1 {
-  animation: progressive-display-menu 3s 2s ease-in-out;
+.menu__card .submenu:nth-child(1) {
+  animation-delay: 500ms;
 }
-.menu__card .submenu-2 {
-  animation: progressive-display-menu 6s 4s ease-in-out;
+.menu__card .submenu:nth-child(2) {
+  animation-delay: 1000ms;
 }
-.menu__card .submenu-3 {
-  animation: progressive-display-menu 9s 6s ease-in-out;
+.menu__card .submenu:nth-child(3) {
+  animation-delay: 1500ms;
+}
+.menu__card .submenu:nth-child(4) {
+  animation-delay: 2000ms;
 }
 .menu__card .submenu__title h3 {
   font-size: 1rem;
@@ -597,6 +631,10 @@ h1 {
   display: flex;
   position: relative;
   overflow: hidden;
+  /*   @media (min-width: 1025px) {
+    animation: progressive-display-menuItem-desktop 1s;
+    animation-fill-mode: both;
+  }*/
 }
 .menu__card .submenu__item .hidden {
   position: absolute;
@@ -683,14 +721,13 @@ h1 {
 .menu__card .submenu__item #ck9:checked ~ label .icon-check {
   animation: right-left-rotation 0.5s ease-in-out;
 }
-.menu__card .submenu__item #ck10:checked ~ label {
-  cursor: pointer;
-}
-.menu__card .submenu__item #ck10:checked ~ label .submenu__check {
-  margin-right: 0px;
-}
-.menu__card .submenu__item #ck10:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+@media (min-width: 1025px) {
+  .menu__card .submenu__item:hover .submenu__check {
+    margin-right: 0px;
+  }
+  .menu__card .submenu__item:hover .icon-check {
+    animation: right-left-rotation 0.5s ease-in-out;
+  }
 }
 .menu__card .submenu__description {
   overflow: hidden;

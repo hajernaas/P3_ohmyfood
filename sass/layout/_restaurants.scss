@@ -96,7 +96,7 @@
 
           #activate#{$i}-div:checked ~ label {
             .card__heart-full {
-              @include heart_checked;
+              @include heart_filling;
               @include position-absolute-heart;
             }
           }
@@ -107,7 +107,7 @@
             .card__heart-full {
               //visibility: visible;
               @include position-absolute-heart;
-              @include heart_checked;
+              @include heart_filling;
             }
           }
         }

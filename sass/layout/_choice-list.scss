@@ -1,99 +1,101 @@
-.choice-list{
-
-  padding: 0 20px;
-  margin-top:rem(48) ;
-  margin-bottom: rem(68);
+.choice-list {
+  padding: rem(20);
+  margin-top: rem(20);
+  margin-bottom: rem(40);
   counter-reset: steps;
 
-    @media (min-width:1025px) {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-      //  align-items: flex-start;
-       gap: rem(25); 
-       padding: rem(50) rem(180);
-       margin:rem(30) 0;
-        
-    }
+  @media (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //  align-items: flex-start;
+    gap: rem(25);
+    padding: rem(50) rem(180);
+    margin: rem(30) 0;
+  }
 
   &__title {
-   margin-left: rem(20);
-   margin-right: rem(80);
-   @media (min-width:1025px) {
-   margin:0;
-   padding-left: rem(27);
+    padding: rem(10);
+    margin: rem(15) 0;
+
+    @media (min-width: 1025px) {
+      margin: 0;
+      padding-left: rem(55);
+    }
   }
 
-   }
-
-   &__ul
-   { list-style-type: none;
-    padding-left: 20px;
+  &__ul {
     list-style-type: none;
+    padding-left: rem(18);
     margin: 0;
-    
-    @media (min-width:1025px)  {
-        display: flex;
-        flex-direction: row; 
-        justify-content: center; 
-        gap:12px;
-        align-items: center; 
-        
-   }
+
+    @media (min-width: 1025px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      //  gap: rem(35);
+      gap: rem(30);
+      align-items: center;
+    }
   }
-   
-   &__li{
-    background-color:$background-color;
-    border-radius:rem(map-get($radius,menu));
-    padding:rem(28.59) rem(25) rem(28.12) rem(35);
-    margin: rem(26) rem(20) rem(24.92) rem(20);
+
+  &__li {
+    position: relative;
+    background-color: $background-color;
+    border-radius: rem(map-get($radius, menu));
+    // padding: rem(28.59) rem(25) rem(28.12) rem(35);
+    //  margin: rem(26) rem(20) rem(24.92) rem(20);
+    padding: rem(20) rem(25);
+    margin-bottom: rem(30);
+
     font-size: $f4-font-size;
-    font-weight: $medium-font-weight; 
+    font-weight: $medium-font-weight;
     @include box-shadow-menu;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     //flex-grow:1;
-    @media (min-width:1025px) {
-      padding:rem(29.59) rem(50) rem(28.12) rem(35);
-      // flex-shrink:2; 
-      width:rem(297);
-     
-     }
+    @media (min-width: 1025px) {
+      //padding: rem(29.59) rem(50) rem(28.12) rem(35);
+      // flex-shrink:2;
+      padding: rem(20) rem(35);
+      width: rem(297);
+    }
 
-    &:last-child > i{
-        color:$color-primary;
+    &:last-child > i {
+      color: $color-primary;
+    }
+
+    &::before {
+      counter-increment: steps;
+      content: " " counter(steps);
+      color: $background-color;
+      font-weight: $medium-font-weight;
+      background-color: $color-primary;
+      padding: rem(6);
+      @include dimension(16, 16);
+      border-radius: rem(map-get($radius, steps-menu));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: rem(-40);
+      @media (min-width: 1025px) {
+        margin-left: rem(-50);
       }
-     
-    &::before{
-        counter-increment: steps;
-        content:" " counter(steps);
-        color :$background-color;
-        font-weight: $medium-font-weight;
-        background-color:$color-primary;
-        padding:rem(6);
-        @include dimension(16,16);
-        border-radius:rem(map-get($radius , steps-menu ));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: rem(-52);
-       /* position: absolute;
+
+      /* position: absolute;
         bottom: 1.5rem;
         left: -1rem;*/
-
-    }  
-
-   } 
-   &__icon {
-    margin-right:rem(25);
-    color:$grey-1;
+    }
+  }
+  &__icon {
+    // margin-right: rem(15);
+    margin-right: rem(7);
+    color: $grey-1;
     font-size: $f2-font-size;
-    margin-left: rem(20);
-   }
-  
- 
- }
-
+    // margin-left: rem(20);
+    margin-left: rem(10);
+  }
+}
