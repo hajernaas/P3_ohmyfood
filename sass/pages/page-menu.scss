@@ -43,12 +43,13 @@
       top: rem(45);
       right: rem(-12);
       @include heart;
+
       #activate-div {
         display: none;
         @include position-absolute-heart;
       }
 
-      #activate-div:checked ~ label {
+      #activate-div:checked~label {
         .card__heart-full {
           opacity: 1;
           cursor: pointer;
@@ -101,6 +102,7 @@
           background-color: $color-tertiary;
         }
       }
+
       &__item {
         .menu-bar {
           background-color: $white;
@@ -126,9 +128,10 @@
           //top: 200px;
         }
 
-        @for $i from 1 through 9 {
-          #ck#{$i}:checked ~ label {
+        @for $i from 1 through 10 {
+          #ck#{$i}:checked~label {
             cursor: pointer;
+
             .submenu__check {
               margin-right: 0px;
             }
@@ -166,17 +169,20 @@
           text-overflow: ellipsis;
           white-space: nowrap;*/
         }
+
         .title {
           font-family: $body-font-family;
           font-size: $f2-font-size;
           font-weight: $medium-font-weight;
           padding-bottom: rem(5);
         }
+
         .ingredients {
           font-size: $f5-font-size;
           font-weight: $light-font-weight;
         }
       }
+
       &__price {
         font-size: $f5-font-size;
         font-weight: $bold-font-weight;
@@ -185,6 +191,7 @@
         margin-left: auto;
         padding: rem(5) rem(20) rem(10) rem(20);
       }
+
       &__check {
         background-color: #99e2d0;
         width: rem(50);
@@ -207,11 +214,13 @@
 
   &__order {
     text-align: center;
+
     .btn {
       @include dimension(186, 50);
       padding: rem(16) rem(48);
       margin: rem(40) 0;
       @extend .btn;
+
       &:hover {
         @extend .btn-hover;
         @include box-shadow-btn-animation;

@@ -66,3 +66,16 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes grow {
+  0%,
+  100% {
+    // -webkit-transform: scaleY(0.5);
+    transform: scaleX(0.5);
+  }
+
+  50% {
+    //-webkit-transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}

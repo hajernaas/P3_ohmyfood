@@ -19,6 +19,7 @@
 @mixin box-shadow-btn-animation {
   box-shadow: 0 rem(4) rem(10) 0 $border-box-shadow-btn-anim;
 }
+
 @mixin lighten {
   background-color: lighten($color-primary, 10%);
   background-blend-mode: lighten;
