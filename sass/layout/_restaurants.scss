@@ -1,14 +1,17 @@
 .restaurants {
   background-color: $background-color;
   padding: rem(27) 0;
+
   @media (min-width: 1025px) {
     /* display: flex;    
     justify-content: center;
     flex-direction: column;*/
     padding: 0 rem(180);
   }
+
   &__title {
     padding: rem(20) 0 0 rem(30);
+
     @media (min-width: 1025px) {
       margin-bottom: rem(28);
     }
@@ -34,6 +37,7 @@
       background: $white;
       margin: rem(20);
       padding-bottom: rem(5);
+
       /* @media (min-width:1025px) {
             width: 40%;
             }*/
@@ -60,10 +64,12 @@
         width: 100%;
         max-height: rem(220);
         background-repeat: no-repeat;
+
         @media (min-width: 1025px) {
           height: rem(251);
         }
       }
+
       /*
            &__container {
                 display: flex;
@@ -84,34 +90,57 @@
         margin-top: 0;
       }
 
+
+
       &__heart {
         position: relative;
         @include heart;
 
-        @for $i from 1 through 5 {
+        @for $i from 1 through $nb-ck-heart {
           #activate#{$i}-div {
             display: none;
             @include position-absolute-heart;
           }
 
-          #activate#{$i}-div:checked ~ label {
+          #activate#{$i}-div:checked~label {
+
             .card__heart-full {
               @include heart_filling;
               @include position-absolute-heart;
             }
+
           }
         }
 
+
+
+
+
+
         @media (min-width: 1025px) {
+
           &:hover {
+
             .card__heart-full {
               //visibility: visible;
               @include position-absolute-heart;
               @include heart_filling;
             }
           }
+
+
         }
+
+
+
+
+
       }
+
+
+
     }
+
   }
+
 }

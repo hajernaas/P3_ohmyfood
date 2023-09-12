@@ -1,7 +1,5 @@
 .loader {
-  background: #eaeaea;
-  width: 100%;
-  height: 100%;
+  background: $grey-2;
   position: fixed;
   inset: 0;
   z-index: 1;
@@ -9,49 +7,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader_fade_out 1s ease-in-out 3s forwards;
+  animation: loader_fade_out 1s ease-in-out 2s forwards;
+
   &__img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    background: transparent;
-    border-radius: 50%;
-    // text-align: center;
-    width: 200px;
-    height: 200px;
-    // animation: grow 1s linear infinite;
+    transform-origin: center;
+    @include dimension(150, 150);
   }
 
   &__circle {
-    display: inline-block;
+
     position: relative;
-    width: 250px;
-    height: 250px;
-    //vertical-align: middle;
+    @include dimension(250, 250);
     border-radius: 50%;
-    border: 7px solid transparent;
-    border-top-color: #9356dc;
-    animation: spin 2s linear infinite;
+    border: rem(7) solid transparent;
+    border-top-color: $color-primary;
+    animation: spin 1.5s linear infinite;
 
     &::before,
     &::after {
       content: "";
       position: absolute;
       border-radius: 50%;
-      border: 7px solid transparent;
+      border: rem(7) solid transparent;
     }
+
     &::before {
-      inset: 10px;
-      border-top-color: #99e2d0;
-      animation: spin 3s linear infinite;
+      inset: rem(10);
+      border-top-color: $color-tertiary;
+      animation: spin 2s linear infinite;
     }
+
     &::after {
-      inset: 25px;
-      border-top-color: #ff79da;
-      animation: spin 1.5s linear infinite;
+      inset: rem(25);
+      border-top-color: $color-secondary;
+      animation: spin 1s linear infinite;
     }
   }
 }

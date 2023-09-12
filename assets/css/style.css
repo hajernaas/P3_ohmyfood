@@ -1,55 +1,3 @@
-.loader {
-  background: #eaeaea;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loader_fade_out 1s ease-in-out 3s forwards;
-}
-.loader__img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  background: transparent;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
-.loader__circle {
-  display: inline-block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: #9356dc;
-  animation: spin 2s linear infinite;
-}
-.loader__circle::before, .loader__circle::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-.loader__circle::before {
-  inset: 10px;
-  border-top-color: #99e2d0;
-  animation: spin 3s linear infinite;
-}
-.loader__circle::after {
-  inset: 25px;
-  border-top-color: #ff79da;
-  animation: spin 1.5s linear infinite;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -91,9 +39,6 @@ h1 {
 @keyframes right-left-rotation {
   0% {
     transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
   }
   50% {
     transform: rotate(180deg);
@@ -147,7 +92,7 @@ h1 {
   }
 }
 @keyframes grow {
-  0%, 100% {
+  100% {
     transform: scaleX(0.5);
   }
   50% {
@@ -170,6 +115,49 @@ h1 {
   background-color: #ae80e5;
   transform: scale(1.01);
   opacity: 0.85;
+}
+
+.loader {
+  background: #eaeaea;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader_fade_out 1s ease-in-out 2s forwards;
+}
+.loader__img {
+  position: absolute;
+  transform-origin: center;
+  width: 9.375rem;
+  height: 9.375rem;
+}
+.loader__circle {
+  position: relative;
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  border: 0.4375rem solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 1.5s linear infinite;
+}
+.loader__circle::before, .loader__circle::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 0.4375rem solid transparent;
+}
+.loader__circle::before {
+  inset: 0.625rem;
+  border-top-color: #99e2d0;
+  animation: spin 2s linear infinite;
+}
+.loader__circle::after {
+  inset: 1.5625rem;
+  border-top-color: #ff79da;
+  animation: spin 1s linear infinite;
 }
 
 .header {
@@ -425,7 +413,7 @@ h1 {
   right: 1.5625rem;
   top: -3.4375rem;
   transition-property: all;
-  transition-duration: 7s;
+  transition-duration: 3s;
 }
 .restaurants__cards .card__heart #activate1-div {
   display: none;
@@ -485,23 +473,6 @@ h1 {
   top: -3.4375rem;
 }
 .restaurants__cards .card__heart #activate4-div:checked ~ label .card__heart-full {
-  opacity: 1;
-  cursor: pointer;
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  position: absolute;
-  right: 1.5625rem;
-  top: -3.4375rem;
-}
-.restaurants__cards .card__heart #activate5-div {
-  display: none;
-  position: absolute;
-  right: 1.5625rem;
-  top: -3.4375rem;
-}
-.restaurants__cards .card__heart #activate5-div:checked ~ label .card__heart-full {
   opacity: 1;
   cursor: pointer;
   background-clip: text;
@@ -630,7 +601,7 @@ h1 {
   right: 1.5625rem;
   top: -3.4375rem;
   transition-property: all;
-  transition-duration: 7s;
+  transition-duration: 3s;
 }
 .menu__title .heart #activate-div {
   display: none;
@@ -669,10 +640,9 @@ h1 {
   }
 }
 .menu__card .submenu {
+  animation: progressive-display-menu-mobile 3s ease-in-out backwards;
   margin-top: 2.5rem;
   padding: 0 0.625rem;
-  animation: progressive-display-menu-mobile 3s ease-in-out;
-  animation-fill-mode: backwards;
 }
 .menu__card .submenu:nth-child(1) {
   animation-delay: 500ms;
@@ -707,104 +677,100 @@ h1 {
   display: flex;
   position: relative;
   overflow: hidden;
-  /*   @media (min-width: 1025px) {
-    animation: progressive-display-menuItem-desktop 1s;
-    animation-fill-mode: both;
-  }*/
 }
 .menu__card .submenu__item .hidden {
   position: absolute;
-  left: 30px;
+  left: 1.875rem;
 }
 .menu__card .submenu__item #ck1:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck1:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck1:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck2:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck2:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck2:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck3:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck3:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck3:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck4:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck4:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck4:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck5:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck5:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck5:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck6:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck6:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck6:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck7:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck7:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck7:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck8:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck8:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck8:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck9:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck9:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck9:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 .menu__card .submenu__item #ck10:checked ~ label {
   cursor: pointer;
 }
 .menu__card .submenu__item #ck10:checked ~ label .submenu__check {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .menu__card .submenu__item #ck10:checked ~ label .icon-check {
-  animation: right-left-rotation 0.5s ease-in-out;
+  animation: right-left-rotation 0.3s ease-in-out;
 }
 @media (min-width: 1025px) {
   .menu__card .submenu__item:hover .submenu__check {
@@ -848,7 +814,7 @@ h1 {
 .menu__card .submenu__check {
   background-color: #99e2d0;
   width: 3.125rem;
-  margin-right: -50px;
+  margin-right: -3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;

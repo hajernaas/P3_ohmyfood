@@ -11,6 +11,7 @@ $base-color: #000000;
 $green: #008766;
 $red: red;
 
+
 //background-color
 $background-color: #f6f6f6;
 $background-color-location: $grey-2;
@@ -22,11 +23,9 @@ $border-box-shadow-menu: rgba($base-color, 0.1);
 $border-box-shadow-btn-anim: rgba($base-color, 0.35);
 
 //background-image
-$button-gradient: linear-gradient(
-  193deg,
-  $color-primary -11.44%,
-  $color-secondary 123.93%
-);
+$button-gradient: linear-gradient(193deg,
+    $color-primary -11.44%,
+    $color-secondary 123.93%);
 
 //border-radius
 $radius: (
@@ -38,6 +37,7 @@ $radius: (
 );
 
 //animation
+$nb-ck-heart: 4;
 $nbr-submenu: 4;
 $anim-dur: 2000ms;
 $anim-delay: math.div(1 * $anim-dur, $nbr-submenu);

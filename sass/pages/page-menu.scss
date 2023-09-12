@@ -64,7 +64,6 @@
       @media (min-width: 1025px) {
         &:hover {
           .card__heart-full {
-            //visibility: visible;
             @include position-absolute-heart;
             @include heart_filling;
           }
@@ -80,14 +79,19 @@
 
   &__card {
     .submenu {
-      margin-top: rem(40);
-      padding: 0 rem(10);
 
       @for $i from 1 through $nbr-submenu {
         &:nth-child(#{$i}) {
           animation-delay: $anim-delay * $i;
         }
       }
+
+      animation: progressive-display-menu-mobile 3s ease-in-out backwards;
+
+      // animation-fill-mode: backwards;
+
+      margin-top: rem(40);
+      padding: 0 rem(10);
 
       &__title {
         h3 {
@@ -114,18 +118,12 @@
           display: flex;
           position: relative;
           overflow: hidden;
-          //white-space: nowrap;
-
-          /*   @media (min-width: 1025px) {
-            animation: progressive-display-menuItem-desktop 1s;
-            animation-fill-mode: both;
-          }*/
         }
 
         .hidden {
           position: absolute;
-          left: 30px;
-          //top: 200px;
+          left: rem(30);
+
         }
 
         @for $i from 1 through 10 {
@@ -133,17 +131,24 @@
             cursor: pointer;
 
             .submenu__check {
-              margin-right: 0px;
+              margin-right: 0;
             }
 
             .icon-check {
-              animation: right-left-rotation 0.5s ease-in-out;
+              animation: right-left-rotation 0.3s ease-in-out;
             }
           }
         }
 
+
+
+
+
+
         @media (min-width: 1025px) {
+
           &:hover {
+
             .submenu__check {
               margin-right: 0px;
             }
@@ -153,6 +158,7 @@
             }
           }
         }
+
       }
 
       &__description {
@@ -161,7 +167,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
 
-        //  white-space: nowrap;
+
         .title,
         .ingredients {
           margin: 0;
@@ -195,20 +201,17 @@
       &__check {
         background-color: #99e2d0;
         width: rem(50);
-        margin-right: -50px;
-        //opacity: 0;
+        margin-right: rem(-50);
         display: flex;
         align-items: center;
         justify-content: center;
-        // transition: all 1s;
 
         .icon-check {
           color: $white;
         }
       }
 
-      animation: progressive-display-menu-mobile 3s ease-in-out;
-      animation-fill-mode: backwards;
+
     }
   }
 
