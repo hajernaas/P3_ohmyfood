@@ -1,27 +1,27 @@
+.location {
 
-.location{
-   
     background-color: $grey-2;
     height: rem(50);
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
-    gap:rem(5);
+    align-items: center;*/
+    @include flex-center;
+    gap: rem(5);
 
-    &__icon{
-        
-        @include dimension(12,16);
+    &__icon {
+
+        @include dimension(12, 16);
     }
 
-    &__input{
+    &__input {
         text-align: center;
-        font-size:$f4-font-size ;
-        font-weight:$bold-font-weight;
+        font-size: $f4-font-size ;
+        font-weight: $bold-font-weight;
         border: none;
         background-color: $grey-2;
-        @include dimension(150,49);
-        color:$grey ; 
-        
+        @include dimension(150, 49);
+        color: $grey ;
+
     }
 
 }

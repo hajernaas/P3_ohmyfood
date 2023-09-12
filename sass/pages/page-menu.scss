@@ -202,9 +202,10 @@
         background-color: #99e2d0;
         width: rem(50);
         margin-right: rem(-50);
-        display: flex;
+        /*display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;*/
+        @include flex-center;
 
         .icon-check {
           color: $white;

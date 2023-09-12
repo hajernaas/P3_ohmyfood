@@ -59,3 +59,20 @@
   border-top-left-radius: rem(40);
   border-top-right-radius: rem(40);
 }
+
+
+@mixin flex-center() {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@mixin flex-end() {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}

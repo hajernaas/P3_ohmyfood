@@ -13,21 +13,25 @@
     font-family: $header-footer-font-family;
     margin: 0 0 rem(16);
     padding-right: 0;
+
     @media (min-width: 1025px) {
-      display: flex;
+      //display: flex;
+      @include flex-end;
       margin-bottom: -46px;
-      justify-content: flex-end;
-      align-items: flex-end;
+      //justify-content: flex-end;
+      //align-items: flex-end;
     }
   }
 
   &__list {
     list-style-type: none;
     padding: 0;
+
     @media (min-width: 1025px) {
-      display: flex;
+      /*display: flex;
       justify-content: flex-end;
-      align-items: flex-end;
+      align-items: flex-end;*/
+      @include flex-end;
       gap: 18px;
       margin-right: 150px;
     }
@@ -41,6 +45,7 @@
     color: white;
     font-size: $f4-font-size;
     font-weight: $medium-font-weight;
+
     .icon-footer {
       padding-right: rem(11);
     }

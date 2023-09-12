@@ -6,8 +6,9 @@
   position: relative;
 
   &__logo {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    @include flex-center;
   }
 }

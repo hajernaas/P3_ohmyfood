@@ -56,6 +56,7 @@
     flex-direction: row;
     //justify-content: flex-start;
     align-items: center;
+
     //  flex-wrap: nowrap;
     //flex-grow:1;
     @media (min-width: 1025px) {
@@ -67,7 +68,7 @@
       //justify-content: space-around;
     }
 
-    &:last-child > i {
+    &:last-child>i {
       color: $color-primary;
     }
 
@@ -81,9 +82,11 @@
       @include dimension(16, 16);
       // border-radius: rem(map-get($radius, steps-menu));
       border-radius: 50%;
-      display: flex;
+      @include flex-center;
+      /*display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;*/
+
       margin-left: rem(-40);
       /*  @media (min-width: 1025px) {
         margin-left: rem(-40);
@@ -94,6 +97,7 @@
         left: -1rem;*/
     }
   }
+
   &__icon {
     // margin-right: rem(15);
     margin-right: rem(10);
