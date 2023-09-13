@@ -1,14 +1,10 @@
 .header {
   &__arrow {
     position: absolute;
-    // left: rem(38);
     left: rem(20);
-    @include dimension(30, 30);
     top: 40%;
-    /*  display:flex;
-        align-items:center;
-        justify-content:center;*/
     transform: translateY(-40%);
+    @include dimension(30, 30);
     font-size: $f1-font-size;
   }
 }
@@ -20,23 +16,20 @@
 }
 
 .menu {
+  position: relative;
   background-color: #f6f6f6;
   @include radius-page-menu;
   width: 100%;
-  position: relative;
   margin-top: rem(-50);
 
   &__title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    //padding: 10px;
+    justify-content: space-between;
     padding: rem(20) rem(17) 0 rem(17);
-    // margin-bottom:40px;
     font-family: $header-footer-font-family;
     font-size: $f1-menupage;
     font-weight: $regular-font-weight;
-    //padding-left: 7px;
 
     .heart {
       position: relative;
@@ -61,7 +54,8 @@
         }
       }
 
-      @media (min-width: 1025px) {
+      //@media (min-width: 1025px) 
+      @include large-screen {
         &:hover {
           .card__heart-full {
             @include position-absolute-heart;
@@ -71,9 +65,10 @@
       }
     }
 
-    @media (min-width: 1025px) {
+    //@media (min-width: 1025px) 
+    @include large-screen {
       justify-content: center;
-      gap: 60px;
+      gap: rem(60);
     }
   }
 
@@ -87,8 +82,6 @@
       }
 
       animation: progressive-display-menu-mobile 3s ease-in-out backwards;
-
-      // animation-fill-mode: backwards;
 
       margin-top: rem(40);
       padding: 0 rem(10);
@@ -109,14 +102,14 @@
 
       &__item {
         .menu-bar {
+          display: flex;
+          position: relative;
           background-color: $white;
           border-radius: rem(map-get($radius, card));
           padding: 0;
           margin: rem(12);
           @include box-shadow-menu;
           cursor: pointer;
-          display: flex;
-          position: relative;
           overflow: hidden;
         }
 
@@ -145,7 +138,8 @@
 
 
 
-        @media (min-width: 1025px) {
+        //@media (min-width: 1025px)
+        @include large-screen {
 
           &:hover {
 
@@ -171,9 +165,6 @@
         .title,
         .ingredients {
           margin: 0;
-          /*overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;*/
         }
 
         .title {
@@ -202,9 +193,6 @@
         background-color: #99e2d0;
         width: rem(50);
         margin-right: rem(-50);
-        /*display: flex;
-        align-items: center;
-        justify-content: center;*/
         @include flex-center;
 
         .icon-check {
@@ -232,7 +220,8 @@
     }
   }
 
-  @media (min-width: 1025px) {
+  // @media (min-width: 1025px) 
+  @include large-screen {
     width: 70%;
     margin: auto;
     margin-top: rem(-50);

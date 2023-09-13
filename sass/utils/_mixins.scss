@@ -62,17 +62,25 @@
 
 
 @mixin flex-center() {
-
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 @mixin flex-end() {
-
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
 
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin large-screen {
+  @media (min-width:1025px) {
+    @content;
+  }
 }

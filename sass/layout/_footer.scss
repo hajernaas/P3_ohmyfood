@@ -1,6 +1,8 @@
 .footer {
-  @media (min-width: 1025px) {
-    padding: 30px 25px;
+
+  // @media (min-width: 1025px)
+  @include large-screen {
+    padding: rem(30) rem(25);
   }
 
   padding: rem(22) rem(25);
@@ -14,12 +16,10 @@
     margin: 0 0 rem(16);
     padding-right: 0;
 
-    @media (min-width: 1025px) {
-      //display: flex;
+    // @media (min-width: 1025px)
+    @include large-screen {
       @include flex-end;
-      margin-bottom: -46px;
-      //justify-content: flex-end;
-      //align-items: flex-end;
+      margin-bottom: rem(-46);
     }
   }
 
@@ -27,13 +27,11 @@
     list-style-type: none;
     padding: 0;
 
-    @media (min-width: 1025px) {
-      /*display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;*/
+    // @media (min-width:1025px) 
+    @include large-screen {
       @include flex-end;
-      gap: 18px;
-      margin-right: 150px;
+      gap: rem(18);
+      margin-right: rem(150);
     }
   }
 
@@ -42,7 +40,7 @@
   }
 
   &__list--link {
-    color: white;
+    color: $white;
     font-size: $f4-font-size;
     font-weight: $medium-font-weight;
 

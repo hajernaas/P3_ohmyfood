@@ -2,57 +2,52 @@
   background-color: $background-color;
   padding: rem(27) 0;
 
-  @media (min-width: 1025px) {
-    /* display: flex;    
-    justify-content: center;
-    flex-direction: column;*/
+  //@media (min-width: 1025px) 
+  @include large-screen {
     padding: 0 rem(180);
   }
 
   &__title {
     padding: rem(20) 0 0 rem(30);
 
-    @media (min-width: 1025px) {
+    // @media (min-width: 1025px) 
+    @include large-screen {
       margin-bottom: rem(28);
     }
   }
 
   &__cards {
-    @media (min-width: 1025px) {
+
+    //@media (min-width: 1025px) 
+    @include large-screen {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: rem(70);
       row-gap: rem(35);
-      /*display: flex;
-                justify-content: space-between;
-                flex-flow: row wrap;
-                column-gap:70px;
-                row-gap: 35px;*/
     }
 
     .card {
+      position: relative;
       border-radius: rem(map-get($radius, card));
       @include box-shadow-menu;
-      position: relative;
       background: $white;
       margin: rem(20);
       padding-bottom: rem(5);
 
-      /* @media (min-width:1025px) {
-            width: 40%;
-            }*/
+
       &__btn {
+        position: absolute;
+        right: rem(20);
+        top: rem(20);
         color: $green;
         background: $color-tertiary;
         border: rem(5) solid $color-tertiary;
         border-radius: rem(map-get($radius, btn-new));
-        position: absolute;
-        right: rem(20);
-        top: rem(20);
         font-size: $f6-font-size;
         font-weight: $medium-font-weight;
-        width: rem(80);
-        height: rem(29);
+        // width: rem(80);
+        // height: rem(29);
+        @include dimension(80, 29);
         text-align: center;
         @include box-shadow-badge;
       }
@@ -65,18 +60,13 @@
         max-height: rem(220);
         background-repeat: no-repeat;
 
-        @media (min-width: 1025px) {
+        // @media (min-width: 1025px) {
+        @include large-screen {
           height: rem(251);
         }
       }
 
-      /*
-           &__container {
-                display: flex;
-                 justify-content: space-between;
-                align-items: center; 
-            }  
-            */
+
       &__title {
         font-size: $f2-font-size;
         font-weight: $bold-font-weight;
@@ -97,13 +87,13 @@
         @include heart;
 
         @for $i from 1 through $nb-ck-heart {
+
           #activate#{$i}-div {
             display: none;
             @include position-absolute-heart;
           }
 
           #activate#{$i}-div:checked~label {
-
             .card__heart-full {
               @include heart_filling;
               @include position-absolute-heart;
@@ -112,30 +102,26 @@
           }
         }
 
+      }
 
 
+      // @media (min-width: 1025px) 
+      @include large-screen {
 
-
-
-        @media (min-width: 1025px) {
-
-          &:hover {
-
-            .card__heart-full {
-              //visibility: visible;
-              @include position-absolute-heart;
-              @include heart_filling;
-            }
+        &:hover {
+          .card__heart-full {
+            @include position-absolute-heart;
+            @include heart_filling;
           }
-
-
         }
-
-
-
 
 
       }
+
+
+
+
+
 
 
 

@@ -2,9 +2,6 @@
 
     background-color: $grey-2;
     height: rem(50);
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     @include flex-center;
     gap: rem(5);
 
