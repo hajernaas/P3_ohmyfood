@@ -2,15 +2,14 @@
   background-color: $background-color;
   padding: rem(27) 0;
 
-  //@media (min-width: 1025px) 
   @include large-screen {
     padding: 0 rem(180);
   }
 
   &__title {
+
     padding: rem(20) 0 0 rem(30);
 
-    // @media (min-width: 1025px) 
     @include large-screen {
       margin-bottom: rem(28);
     }
@@ -18,7 +17,6 @@
 
   &__cards {
 
-    //@media (min-width: 1025px) 
     @include large-screen {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -27,15 +25,17 @@
     }
 
     .card {
+
       position: relative;
       border-radius: rem(map-get($radius, card));
-      @include box-shadow-menu;
       background: $white;
       margin: rem(20);
       padding-bottom: rem(5);
+      @include box-shadow-menu;
 
 
       &__btn {
+
         position: absolute;
         right: rem(20);
         top: rem(20);
@@ -45,10 +45,8 @@
         border-radius: rem(map-get($radius, btn-new));
         font-size: $f6-font-size;
         font-weight: $medium-font-weight;
-        // width: rem(80);
-        // height: rem(29);
-        @include dimension(80, 29);
         text-align: center;
+        @include dimension(80, 29);
         @include box-shadow-badge;
       }
 
@@ -60,7 +58,6 @@
         max-height: rem(220);
         background-repeat: no-repeat;
 
-        // @media (min-width: 1025px) {
         @include large-screen {
           height: rem(251);
         }
@@ -80,14 +77,11 @@
         margin-top: 0;
       }
 
-
-
       &__heart {
         position: relative;
         @include heart;
 
         @for $i from 1 through $nb-ck-heart {
-
           #activate#{$i}-div {
             display: none;
             @include position-absolute-heart;
@@ -102,21 +96,19 @@
           }
         }
 
-      }
-
-
-      // @media (min-width: 1025px) 
-      @include large-screen {
-
-        &:hover {
-          .card__heart-full {
-            @include position-absolute-heart;
-            @include heart_filling;
+        @include large-screen {
+          &:hover {
+            .card__heart-full {
+              @include position-absolute-heart;
+              @include heart_filling;
+            }
           }
         }
 
 
       }
+
+
 
 
 

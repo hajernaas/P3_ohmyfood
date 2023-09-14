@@ -1,6 +1,5 @@
 .footer {
 
-  // @media (min-width: 1025px)
   @include large-screen {
     padding: rem(30) rem(25);
   }
@@ -16,7 +15,6 @@
     margin: 0 0 rem(16);
     padding-right: 0;
 
-    // @media (min-width: 1025px)
     @include large-screen {
       @include flex-end;
       margin-bottom: rem(-46);
@@ -24,10 +22,10 @@
   }
 
   &__list {
+
     list-style-type: none;
     padding: 0;
 
-    // @media (min-width:1025px) 
     @include large-screen {
       @include flex-end;
       gap: rem(18);

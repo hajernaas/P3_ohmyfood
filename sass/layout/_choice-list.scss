@@ -4,7 +4,6 @@
   margin-bottom: rem(40);
   counter-reset: steps;
 
-  // @media (min-width: 1025px) 
   @include large-screen {
     padding: rem(30) rem(160);
     margin: rem(30) 0;
@@ -20,7 +19,6 @@
     padding-left: rem(18);
     margin: 0;
 
-    // @media (min-width: 1025px) 
     @include large-screen {
       @include flex-row;
       gap: rem(43) rem(100);
@@ -40,7 +38,6 @@
     @include box-shadow-menu;
     @include flex-row;
 
-    // @media (min-width: 1025px) {
     @include large-screen {
       flex-grow: 1;
       //justify-content: space-around;

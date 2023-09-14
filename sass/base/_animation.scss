@@ -12,7 +12,7 @@
   }
 }
 
-@keyframes progressive-display-menu-mobile {
+@keyframes progressive-display-menu-desktop {
   from {
     transform: scaleY(0.5) translateX(50%);
     opacity: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-@keyframes progressive-display-menuItem-desktop {
+@keyframes progressive-display-menu-mobile {
   from {
     transform: translateY(50%);
     opacity: 0;
@@ -56,8 +56,6 @@
   }
 }
 
-
-
 @keyframes spin-inverse {
   0% {
     transform: rotate(-360deg);
@@ -65,19 +63,5 @@
 
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes grow {
-
-  //0%,
-  100% {
-    // -webkit-transform: scaleY(0.5);
-    transform: scaleX(0.5);
-  }
-
-  50% {
-    //-webkit-transform: scaleY(1);
-    transform: scaleX(1);
   }
 }

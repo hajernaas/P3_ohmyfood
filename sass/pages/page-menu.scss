@@ -4,8 +4,8 @@
     left: rem(20);
     top: 40%;
     transform: translateY(-40%);
-    @include dimension(30, 30);
     font-size: $f1-font-size;
+    @include dimension(30, 30);
   }
 }
 
@@ -54,7 +54,7 @@
         }
       }
 
-      //@media (min-width: 1025px) 
+
       @include large-screen {
         &:hover {
           .card__heart-full {
@@ -63,9 +63,10 @@
           }
         }
       }
+
+
     }
 
-    //@media (min-width: 1025px) 
     @include large-screen {
       justify-content: center;
       gap: rem(60);
@@ -73,7 +74,11 @@
   }
 
   &__card {
+
     .submenu {
+
+      margin-top: rem(40);
+      padding: 0 rem(10);
 
       @for $i from 1 through $nbr-submenu {
         &:nth-child(#{$i}) {
@@ -83,8 +88,9 @@
 
       animation: progressive-display-menu-mobile 3s ease-in-out backwards;
 
-      margin-top: rem(40);
-      padding: 0 rem(10);
+      @include large-screen {
+        animation: progressive-display-menu-desktop 3s ease-in-out backwards;
+      }
 
       &__title {
         h3 {
@@ -101,13 +107,14 @@
       }
 
       &__item {
+        padding: 0;
+        margin: rem(12);
+
         .menu-bar {
           display: flex;
           position: relative;
           background-color: $white;
           border-radius: rem(map-get($radius, card));
-          padding: 0;
-          margin: rem(12);
           @include box-shadow-menu;
           cursor: pointer;
           overflow: hidden;
@@ -116,6 +123,7 @@
         .hidden {
           position: absolute;
           left: rem(30);
+          display: none;
 
         }
 
@@ -134,17 +142,10 @@
         }
 
 
-
-
-
-
-        //@media (min-width: 1025px)
         @include large-screen {
-
           &:hover {
-
             .submenu__check {
-              margin-right: 0px;
+              margin-right: 0;
             }
 
             .icon-check {
@@ -153,6 +154,7 @@
           }
         }
 
+
       }
 
       &__description {
@@ -160,7 +162,6 @@
         padding: rem(10);
         text-overflow: ellipsis;
         white-space: nowrap;
-
 
         .title,
         .ingredients {
@@ -186,25 +187,30 @@
         display: flex;
         align-items: flex-end;
         margin-left: auto;
-        padding: rem(5) rem(20) rem(10) rem(20);
+        padding-bottom: rem(10);
+        padding-right: rem(20);
+
       }
 
       &__check {
+
         background-color: #99e2d0;
         width: rem(50);
         margin-right: rem(-50);
+        padding: rem(20);
         @include flex-center;
 
         .icon-check {
           color: $white;
         }
-      }
 
+      }
 
     }
   }
 
   &__order {
+
     text-align: center;
 
     .btn {
@@ -220,7 +226,7 @@
     }
   }
 
-  // @media (min-width: 1025px) 
+
   @include large-screen {
     width: 70%;
     margin: auto;
