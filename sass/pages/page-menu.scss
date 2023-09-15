@@ -188,6 +188,7 @@
         margin-right: rem(-50);
         padding: rem(20);
         @include flex-center;
+        transition: all 1s;
 
         .icon-check {
           color: $white;

@@ -778,6 +778,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s;
 }
 .menu__card .submenu__check .icon-check {
   color: #fff;
