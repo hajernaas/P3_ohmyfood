@@ -22,8 +22,7 @@
 
 @mixin lighten {
   background-color: lighten($color-primary, 10%);
-  background-blend-mode: lighten;
-  opacity: 1;
+  opacity: 0.85;
 }
 
 @mixin position-absolute-heart {

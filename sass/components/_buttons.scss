@@ -11,8 +11,6 @@
 
 .btn-hover {
   cursor: pointer;
-  background-color: lighten($color-primary, 10%);
-  //, lighten($color-secondary, 10%);
   transform: scale(1.01);
-  opacity: 0.85;
+  @include lighten;
 }

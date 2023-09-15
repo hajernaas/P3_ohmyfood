@@ -104,8 +104,8 @@ h1 {
 
 .btn-hover, .menu__order .btn:hover, .menu__order .explorer__btn:hover, .explorer__btn:hover {
   cursor: pointer;
-  background-color: #ae80e5;
   transform: scale(1.01);
+  background-color: #ae80e5;
   opacity: 0.85;
 }
 

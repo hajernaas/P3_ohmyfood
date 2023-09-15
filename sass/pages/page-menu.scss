@@ -54,7 +54,6 @@
         }
       }
 
-
       @include large-screen {
         &:hover {
           .card__heart-full {
@@ -63,8 +62,6 @@
           }
         }
       }
-
-
     }
 
     @include large-screen {
@@ -74,9 +71,7 @@
   }
 
   &__card {
-
     .submenu {
-
       margin-top: rem(40);
       padding: 0 rem(10);
 
@@ -124,7 +119,6 @@
           position: absolute;
           left: rem(30);
           display: none;
-
         }
 
         @for $i from 1 through 10 {
@@ -141,7 +135,6 @@
           }
         }
 
-
         @include large-screen {
           &:hover {
             .submenu__check {
@@ -153,8 +146,6 @@
             }
           }
         }
-
-
       }
 
       &__description {
@@ -189,11 +180,9 @@
         margin-left: auto;
         padding-bottom: rem(10);
         padding-right: rem(20);
-
       }
 
       &__check {
-
         background-color: #99e2d0;
         width: rem(50);
         margin-right: rem(-50);
@@ -203,14 +192,11 @@
         .icon-check {
           color: $white;
         }
-
       }
-
     }
   }
 
   &__order {
-
     text-align: center;
 
     .btn {
@@ -225,7 +211,6 @@
       }
     }
   }
-
 
   @include large-screen {
     width: 70%;
