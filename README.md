@@ -95,8 +95,9 @@ Sinon, clonez le projet
 git clone https://github.com/hajernaas/P3_ohmyfood.git
 
 Installez les dépendances
-npm install
-npm run sass
+
+- npm install
+- npm run sass
 
 # Compétences évaluées
 
