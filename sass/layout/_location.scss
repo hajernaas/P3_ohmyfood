@@ -1,5 +1,4 @@
 .location {
-
     background-color: $grey-2;
     height: rem(50);
     @include flex-center;
@@ -11,13 +10,11 @@
 
     &__input {
         text-align: center;
-        font-size: $f4-font-size ;
+        font-size: $f4-font-size;
         font-weight: $bold-font-weight;
         border: none;
         background-color: $grey-2;
         @include dimension(150, 49);
-        color: $grey ;
-
+        color: $grey;
     }
-
 }

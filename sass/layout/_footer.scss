@@ -1,5 +1,4 @@
 .footer {
-
   @include large-screen {
     padding: rem(30) rem(25);
   }
@@ -22,7 +21,6 @@
   }
 
   &__list {
-
     list-style-type: none;
     padding: 0;
 

@@ -598,7 +598,7 @@ h1 {
 .menu__card .submenu {
   margin-top: 2.5rem;
   padding: 0 0.625rem;
-  animation: progressive-display-menu-mobile 3s ease-in-out backwards;
+  animation: progressive-display-menu-mobile 3s ease-in-out both;
 }
 .menu__card .submenu:nth-child(1) {
   animation-delay: 666.6666666667ms;
@@ -611,7 +611,7 @@ h1 {
 }
 @media (min-width: 1025px) {
   .menu__card .submenu {
-    animation: progressive-display-menu-desktop 3s ease-in-out backwards;
+    animation: progressive-display-menu-desktop 3s ease-in-out both;
   }
 }
 .menu__card .submenu__title h3 {
@@ -778,7 +778,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s;
+  transition: all 500ms;
 }
 .menu__card .submenu__check .icon-check {
   color: #fff;

@@ -59,7 +59,6 @@
   border-top-right-radius: rem(40);
 }
 
-
 @mixin flex-center() {
   display: flex;
   justify-content: center;
@@ -79,7 +78,7 @@
 }
 
 @mixin large-screen {
-  @media (min-width:1025px) {
+  @media (min-width: 1025px) {
     @content;
   }
 }

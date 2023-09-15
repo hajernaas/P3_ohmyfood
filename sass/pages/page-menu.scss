@@ -78,13 +78,19 @@
       @for $i from 1 through $nbr-submenu {
         &:nth-child(#{$i}) {
           animation-delay: $anim-delay * $i;
+
         }
+
+
       }
 
-      animation: progressive-display-menu-mobile 3s ease-in-out backwards;
+
+      animation: progressive-display-menu-mobile 3s ease-in-out both;
+
 
       @include large-screen {
-        animation: progressive-display-menu-desktop 3s ease-in-out backwards;
+        animation: progressive-display-menu-desktop 3s ease-in-out both;
+
       }
 
       &__title {
@@ -188,7 +194,7 @@
         margin-right: rem(-50);
         padding: rem(20);
         @include flex-center;
-        transition: all 1s;
+        transition: all 500ms;
 
         .icon-check {
           color: $white;
